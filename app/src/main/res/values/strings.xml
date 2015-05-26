@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ERestaurant</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="loading_title">Loading . . .</string>
+</resources>
