@@ -1,17 +1,37 @@
 package com.android.kavi.erestaurant;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
 
 public class LoadingActivity extends ActionBarActivity {
+
+    private TextView loadingTitleTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_loading);
+
+        setUpView();
+    }
+
+    private void setUpView() {
+        loadingTitleTextView = (TextView) findViewById(R.id.loadingTitleTextView);
+
+        loadingTitleTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent tabBarIntent = new Intent(LoadingActivity.this, TabBarActivity.class);
+                startActivity(tabBarIntent);
+                finish();
+            }
+        });
     }
 
     @Override
