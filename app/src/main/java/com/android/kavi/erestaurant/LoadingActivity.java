@@ -27,8 +27,8 @@ public class LoadingActivity extends ActionBarActivity {
         loadingTitleTextView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tabBarIntent = new Intent(LoadingActivity.this, TabBarActivity.class);
-                startActivity(tabBarIntent);
+                Intent tabsIntent = new Intent(LoadingActivity.this, TabsActivity.class);
+                startActivity(tabsIntent);
                 finish();
             }
         });
