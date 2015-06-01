@@ -3,7 +3,9 @@ package com.android.kavi.erestaurant;
 /**
  * Created by kwijewardana on 6/1/15.
  */
+import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -34,7 +36,6 @@ public class TabsActivity extends ActionBarActivity {
 
         //toolbar = (Toolbar) findViewById(R.id.tool_bar);
         //setSupportActionBar(toolbar);
-
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
