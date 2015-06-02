@@ -1,9 +1,22 @@
 <resources>
     <string name="app_name">ERestaurant</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="action_me_label">Me</string>
     <string name="action_settings_label">Settings</string>
     <string name="action_logout_label">Log out</string>
+
     <string name="loading_title">Loading . . .</string>
+
+    <string name="username_hint_label">Username</string>
+    <string name="password_hint_label">Password</string>
+    <string name="login_btn_label">Log In</string>
+
+    <string name="menu_items_btn_label">Menu Items</string>
+    <string name="meals_btn_label">Meals</string>
+    <string name="addons_btn_label">Add-Ons</string>
+
+    <string name="new_order_btn_label">New</string>
+    <string name="in_progress_btn_label">In Progress</string>
+    <string name="completed_orders_btn_label">Completed</string>
+    <string name="canceled_orders_btn_label">Canceled</string>
 </resources>

@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey400"
     android:orientation="vertical">
 
     <LinearLayout
@@ -16,7 +17,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Menu Items"
+            android:text="@string/menu_items_btn_label"
             android:textSize="12dp"
             android:id="@+id/menuItemsBtn"
             android:textColor="@color/white"
@@ -25,7 +26,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Meals"
+            android:text="@string/meals_btn_label"
             android:textSize="12dp"
             android:id="@+id/mealsBtn"
             android:textColor="@color/white"
@@ -34,7 +35,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add-Ons"
+            android:text="@string/addons_btn_label"
             android:textSize="12dp"
             android:id="@+id/addOnsBtn"
             android:textColor="@color/white"

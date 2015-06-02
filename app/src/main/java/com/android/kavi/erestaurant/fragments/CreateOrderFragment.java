@@ -48,6 +48,9 @@ public class CreateOrderFragment extends Fragment {
         mealsBtn.setLayoutParams(btnLayoutParams);
         addOnsBtn.setLayoutParams(btnLayoutParams);
 
+        // Initial selection indicator
+        menuItemsBtn.setBackgroundColor(getResources().getColor(R.color.tabsScrollColor));
+
         menuItemsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

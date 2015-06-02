@@ -51,6 +51,9 @@ public class OrdersFragment extends Fragment {
         completedOrderBtn.setLayoutParams(btnLayoutParams);
         canceledOrdersBtn.setLayoutParams(btnLayoutParams);
 
+        // Initial selection indicator
+        newOrdersBtn.setBackgroundColor(getResources().getColor(R.color.tabsScrollColor));
+
         newOrdersBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

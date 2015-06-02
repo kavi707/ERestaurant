@@ -2,6 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/grey400"
     android:orientation="vertical" >
 
     <LinearLayout
@@ -17,7 +18,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="New"
+            android:text="@string/new_order_btn_label"
             android:textSize="12dp"
             android:id="@+id/newOrdersBtn"
             android:textColor="@color/white"
@@ -26,7 +27,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="In Progress"
+            android:text="@string/in_progress_btn_label"
             android:textSize="12dp"
             android:id="@+id/workInProgressBtn"
             android:textColor="@color/white"
@@ -35,7 +36,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Completed"
+            android:text="@string/completed_orders_btn_label"
             android:textSize="12dp"
             android:id="@+id/completedOrdersBtn"
             android:textColor="@color/white"
@@ -44,7 +45,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Canceled"
+            android:text="@string/canceled_orders_btn_label"
             android:textSize="12dp"
             android:id="@+id/cancelOrdersBtn"
             android:textColor="@color/white"
@@ -57,5 +58,6 @@
         android:id="@+id/listView"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/linearLayout" />
+
 
 </RelativeLayout>
