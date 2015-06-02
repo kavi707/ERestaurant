@@ -4,9 +4,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.GridView;
 import android.widget.LinearLayout;
@@ -18,7 +20,6 @@ import com.android.kavi.erestaurant.dataObjs.GridItem;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 /**
  * Created by kavi707 on 5/27/15.
@@ -62,6 +63,13 @@ public class CreateOrderFragment extends Fragment {
         menuItemGridView = (GridView) createOrderFragmentView.findViewById(R.id.menuItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
         menuItemGridView.setAdapter(customGridViewAdapter);
+
+        menuItemGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("Item pos: ", ">>>>>>>>>>>>>>>>>>>>>> " + position);
+            }
+        });
         // End of loading data to grid view
 
         LinearLayout.LayoutParams btnLayoutParams = (LinearLayout.LayoutParams) menuItemsBtn.getLayoutParams();
