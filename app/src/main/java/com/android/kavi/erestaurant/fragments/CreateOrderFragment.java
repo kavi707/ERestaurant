@@ -52,7 +52,7 @@ public class CreateOrderFragment extends Fragment {
         mealsBtn = (Button) createOrderFragmentView.findViewById(R.id.mealsBtn);
         addOnsBtn = (Button) createOrderFragmentView.findViewById(R.id.addOnsBtn);
 
-        //TODO - Start Loading data to Grid View
+        //TODO - Start on Grid View
         Bitmap appIcon = BitmapFactory.decodeResource(this.getResources(), R.mipmap.ic_launcher);
 
         gridViewItems.add(new GridItem(appIcon, "Rice"));
@@ -67,7 +67,7 @@ public class CreateOrderFragment extends Fragment {
         menuItemGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Log.d("Item pos: ", ">>>>>>>>>>>>>>>>>>>>>> " + position);
+                Log.d("Grid Item pos: ", ">>>>>>>>>>>>>>>>>>>>>> " + position);
             }
         });
         // End of loading data to grid view
