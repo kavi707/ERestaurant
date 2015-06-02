@@ -13,6 +13,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.android.kavi.erestaurant.adapters.ViewPagerAdapter;
+import com.android.kavi.erestaurant.services.CommonServices;
 import com.android.kavi.erestaurant.views.SlidingTabLayout;
 
 public class TabsActivity extends ActionBarActivity {
@@ -26,16 +27,16 @@ public class TabsActivity extends ActionBarActivity {
     CharSequence Titles[]={"Orders","Create Order"};
     int Numboftabs =2;
 
+    private CommonServices commonServices = new CommonServices();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_tabs);
 
 
-        // Creating The Toolbar and setting it as the Toolbar for the activity
-
-        //toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        //setSupportActionBar(toolbar);
+        // Find device dimensions
+        CommonUtils.DEVICE_DIMENSIONS = commonServices.getDeviceWidthAndHeight(this);
 
         // Creating The ViewPagerAdapter and Passing Fragment Manager, Titles fot the Tabs and Number Of Tabs.
         adapter =  new ViewPagerAdapter(getSupportFragmentManager(),Titles,Numboftabs);
