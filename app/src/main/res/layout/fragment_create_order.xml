@@ -12,7 +12,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:background="@color/red400">
+        android:background="@color/red400"
+        android:id="@+id/createOrderLinearLayout">
 
         <Button
             android:layout_width="wrap_content"
@@ -42,5 +43,15 @@
             style="@android:style/Holo.ButtonBar" />
     </LinearLayout>
 
-
+    <GridView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/menuItemGridView"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="4dp"
+        android:columnWidth="100dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"
+        android:layout_below="@+id/createOrderLinearLayout" />
 </RelativeLayout>
