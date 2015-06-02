@@ -1,4 +1,4 @@
-package com.android.kavi.erestaurant;
+package com.android.kavi.erestaurant.activities;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
@@ -7,6 +7,8 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+
+import com.android.kavi.erestaurant.R;
 
 
 public class LoadingActivity extends ActionBarActivity {

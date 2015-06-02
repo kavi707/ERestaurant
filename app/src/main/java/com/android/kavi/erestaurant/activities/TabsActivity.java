@@ -1,4 +1,4 @@
-package com.android.kavi.erestaurant;
+package com.android.kavi.erestaurant.activities;
 
 /**
  * Created by kwijewardana on 6/1/15.
@@ -12,6 +12,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.android.kavi.erestaurant.CommonUtils;
+import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.adapters.ViewPagerAdapter;
 import com.android.kavi.erestaurant.services.CommonServices;
 import com.android.kavi.erestaurant.views.SlidingTabLayout;
