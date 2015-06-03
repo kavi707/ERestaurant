@@ -4,6 +4,7 @@ import android.graphics.Bitmap;
 
 /**
  * Created by kavi707 on 6/2/15.
+ * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
 public class GridItem {
 

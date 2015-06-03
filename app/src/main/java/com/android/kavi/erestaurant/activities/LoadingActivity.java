@@ -2,16 +2,16 @@ package com.android.kavi.erestaurant.activities;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
 import com.android.kavi.erestaurant.R;
 
-
+/**
+ * Created by kavi707 on 6/2/15.
+ * @author Kavimal Wijewardana <kavi707@gmail.com>
+ */
 public class LoadingActivity extends Activity {
 
     private TextView loadingTitleTextView;

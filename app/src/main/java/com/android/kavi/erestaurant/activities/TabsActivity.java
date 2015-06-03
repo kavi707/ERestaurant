@@ -1,11 +1,6 @@
 package com.android.kavi.erestaurant.activities;
 
-/**
- * Created by kwijewardana on 6/1/15.
- */
-import android.graphics.drawable.ColorDrawable;
 import android.support.v4.view.ViewPager;
-import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -18,6 +13,10 @@ import com.android.kavi.erestaurant.adapters.ViewPagerAdapter;
 import com.android.kavi.erestaurant.services.CommonServices;
 import com.android.kavi.erestaurant.views.SlidingTabLayout;
 
+/**
+ * Created by kwijewardana on 6/1/15.
+ * @author Kavimal Wijewardana <kavi707@gmail.com>
+ */
 public class TabsActivity extends ActionBarActivity {
 
     // Declaring Your View and Variables

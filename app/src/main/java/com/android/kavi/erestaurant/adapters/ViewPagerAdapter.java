@@ -8,7 +8,8 @@ import com.android.kavi.erestaurant.fragments.CreateOrderFragment;
 import com.android.kavi.erestaurant.fragments.OrdersFragment;
 
 /**
- * Created by hp1 on 21-01-2015.
+ * Created by kavi707 on 6/1/15.
+ * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
 public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
