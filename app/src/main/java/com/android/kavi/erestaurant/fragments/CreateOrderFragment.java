@@ -53,12 +53,14 @@ public class CreateOrderFragment extends Fragment {
         addOnsBtn = (Button) createOrderFragmentView.findViewById(R.id.addOnsBtn);
 
         //TODO - Start on Grid View
-        Bitmap appIcon = BitmapFactory.decodeResource(this.getResources(), R.mipmap.ic_launcher);
+        Bitmap riceIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.rices);
+        Bitmap noodlesIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.noodles);
+        Bitmap soupsIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.soup);
 
-        gridViewItems.add(new GridItem(appIcon, "Rice"));
-        gridViewItems.add(new GridItem(appIcon, "Noodles"));
-        gridViewItems.add(new GridItem(appIcon, "Soups"));
-        gridViewItems.add(new GridItem(appIcon, "Salads"));
+        gridViewItems.add(new GridItem(riceIcon, "Rice"));
+        gridViewItems.add(new GridItem(noodlesIcon, "Noodles"));
+        gridViewItems.add(new GridItem(soupsIcon, "Soups"));
+        gridViewItems.add(new GridItem(riceIcon, "Salads"));
 
         menuItemGridView = (GridView) createOrderFragmentView.findViewById(R.id.menuItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
