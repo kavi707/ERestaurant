@@ -17,6 +17,7 @@ import java.util.List;
 
 /**
  * Created by kavi707 on 6/2/15.
+ * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
 public class CustomGridViewAdapter extends ArrayAdapter<GridItem> {
 
