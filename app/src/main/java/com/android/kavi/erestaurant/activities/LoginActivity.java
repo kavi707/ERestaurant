@@ -30,7 +30,7 @@ public class LoginActivity extends Activity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tabsIntent = new Intent(LoginActivity.this, TabsActivity.class);
+                Intent tabsIntent = new Intent(LoginActivity.this, MainTabHostActivity.class);
                 startActivity(tabsIntent);
                 finish();
             }
