@@ -29,10 +29,6 @@ public class CreateOrderFragment extends Fragment {
 
     private View createOrderFragmentView;
 
-    private Button menuItemsBtn;
-    private Button mealsBtn;
-    private Button addOnsBtn;
-
     private GridView menuItemGridView;
     private CustomGridViewAdapter customGridViewAdapter;
     private List<GridItem> gridViewItems = new ArrayList<>();
@@ -49,19 +45,11 @@ public class CreateOrderFragment extends Fragment {
 
     private void setUpViews() {
 
-        menuItemsBtn = (Button) createOrderFragmentView.findViewById(R.id.menuItemsBtn);
-        mealsBtn = (Button) createOrderFragmentView.findViewById(R.id.mealsBtn);
-        addOnsBtn = (Button) createOrderFragmentView.findViewById(R.id.addOnsBtn);
+        Bitmap defaultMealIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.default_meal_image);
 
-        //TODO - Start on Grid View
-        Bitmap riceIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.rices);
-        Bitmap noodlesIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.noodles);
-        Bitmap soupsIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.soup);
-
-        gridViewItems.add(new GridItem(riceIcon, "Rice"));
-        gridViewItems.add(new GridItem(noodlesIcon, "Noodles"));
-        gridViewItems.add(new GridItem(soupsIcon, "Soups"));
-        gridViewItems.add(new GridItem(riceIcon, "Salads"));
+        gridViewItems.add(new GridItem(defaultMealIcon, "Rice"));
+        gridViewItems.add(new GridItem(defaultMealIcon, "Noodles"));
+        gridViewItems.add(new GridItem(defaultMealIcon, "Soups"));
 
         menuItemGridView = (GridView) createOrderFragmentView.findViewById(R.id.menuItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
@@ -74,45 +62,5 @@ public class CreateOrderFragment extends Fragment {
             }
         });
         // End of loading data to grid view
-
-        LinearLayout.LayoutParams btnLayoutParams = (LinearLayout.LayoutParams) menuItemsBtn.getLayoutParams();
-        btnLayoutParams.width = CommonUtils.DEVICE_DIMENSIONS.get("width")/3;
-
-        menuItemsBtn.setLayoutParams(btnLayoutParams);
-        mealsBtn.setLayoutParams(btnLayoutParams);
-        addOnsBtn.setLayoutParams(btnLayoutParams);
-
-        // Initial selection indicator
-        menuItemsBtn.setBackgroundColor(getResources().getColor(R.color.tabsScrollColor));
-
-        menuItemsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Selector indication
-                menuItemsBtn.setBackgroundColor(getResources().getColor(R.color.tabsScrollColor));
-                mealsBtn.setBackgroundColor(getResources().getColor(R.color.red400));
-                addOnsBtn.setBackgroundColor(getResources().getColor(R.color.red400));
-            }
-        });
-
-        mealsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Selector indication
-                menuItemsBtn.setBackgroundColor(getResources().getColor(R.color.red400));
-                mealsBtn.setBackgroundColor(getResources().getColor(R.color.tabsScrollColor));
-                addOnsBtn.setBackgroundColor(getResources().getColor(R.color.red400));
-            }
-        });
-
-        addOnsBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Selector indication
-                menuItemsBtn.setBackgroundColor(getResources().getColor(R.color.red400));
-                mealsBtn.setBackgroundColor(getResources().getColor(R.color.red400));
-                addOnsBtn.setBackgroundColor(getResources().getColor(R.color.tabsScrollColor));
-            }
-        });
     }
 }

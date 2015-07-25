@@ -17,10 +17,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".activities.LoginActivity"/>
-        <activity android:name=".activities.TabsActivity"/>
+        <activity android:name=".activities.tabs.HomeActivity"/>
         <activity android:name=".activities.MainTabHostActivity"/>
         <activity android:name=".activities.tabs.ActiveTablesActivity"/>
-        <activity android:name=".activities.tabs.HomeActivity"/>
         <activity android:name=".activities.tabs.ReadyItemsActivity"/>
         <activity android:name=".activities.tabs.SearchActivity"/>
     </application>

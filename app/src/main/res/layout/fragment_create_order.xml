@@ -5,44 +5,6 @@
     android:background="@color/grey400"
     android:orientation="vertical">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:background="@color/red400"
-        android:id="@+id/createOrderLinearLayout">
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/menu_items_btn_label"
-            android:textSize="12dp"
-            android:id="@+id/menuItemsBtn"
-            android:textColor="@color/white"
-            style="@android:style/Holo.ButtonBar" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/meals_btn_label"
-            android:textSize="12dp"
-            android:id="@+id/mealsBtn"
-            android:textColor="@color/white"
-            style="@android:style/Holo.ButtonBar" />
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/addons_btn_label"
-            android:textSize="12dp"
-            android:id="@+id/addOnsBtn"
-            android:textColor="@color/white"
-            style="@android:style/Holo.ButtonBar" />
-    </LinearLayout>
-
     <GridView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -51,8 +13,8 @@
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
         android:columnWidth="150dp"
+        android:layout_margin="15dp"
         android:gravity="center"
         android:numColumns="auto_fit"
-        android:stretchMode="columnWidth"
-        android:layout_below="@+id/createOrderLinearLayout" />
+        android:stretchMode="columnWidth"/>
 </RelativeLayout>

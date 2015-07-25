@@ -8,9 +8,9 @@ import android.widget.TabHost;
 
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.activities.tabs.ActiveTablesActivity;
-import com.android.kavi.erestaurant.activities.tabs.HomeActivity;
 import com.android.kavi.erestaurant.activities.tabs.ReadyItemsActivity;
 import com.android.kavi.erestaurant.activities.tabs.SearchActivity;
+import com.android.kavi.erestaurant.activities.tabs.HomeActivity;
 
 /**
  * Created by kavi707 on 7/12/15.
@@ -26,6 +26,13 @@ public class MainTabHostActivity extends TabActivity {
         Resources ressources = getResources();
         TabHost tabHost = getTabHost();
 
+        // Home tab
+        Intent intentHome = new Intent().setClass(this, HomeActivity.class);
+        TabHost.TabSpec tabSpecHome = tabHost
+                .newTabSpec("Home")
+                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
+                .setContent(intentHome);
+
         // Active Tables tab
         Intent intentActiveTabs = new Intent().setClass(this, ActiveTablesActivity.class);
         TabHost.TabSpec tabSpecActiveTables = tabHost
@@ -40,13 +47,6 @@ public class MainTabHostActivity extends TabActivity {
                 .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
                 .setContent(intentSearch);
 
-        // Home tab
-        Intent intentHome = new Intent().setClass(this, HomeActivity.class);
-        TabHost.TabSpec tabSpecHome = tabHost
-                .newTabSpec("Home")
-                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
-                .setContent(intentHome);
-
         // Ready Items tab
         Intent intentReadyItems = new Intent().setClass(this, ReadyItemsActivity.class);
         TabHost.TabSpec tabSpecReadyItems = tabHost
@@ -54,19 +54,12 @@ public class MainTabHostActivity extends TabActivity {
                 .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
                 .setContent(intentReadyItems);
 
-        // Old tab
-        Intent oldTabIntent = new Intent().setClass(this, TabsActivity.class);
-        TabHost.TabSpec tabSpecOldTab = tabHost
-                .newTabSpec("Ready Items")
-                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
-                .setContent(oldTabIntent);
 
         // add all tabs
+        tabHost.addTab(tabSpecHome);
         tabHost.addTab(tabSpecActiveTables);
         tabHost.addTab(tabSpecSearch);
-        tabHost.addTab(tabSpecHome);
         tabHost.addTab(tabSpecReadyItems);
-        tabHost.addTab(tabSpecOldTab);
 
         //set Windows tab as default (zero based)
         tabHost.setCurrentTab(0);
