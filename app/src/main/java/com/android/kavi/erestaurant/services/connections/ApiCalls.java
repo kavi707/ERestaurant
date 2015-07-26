@@ -5,5 +5,5 @@ package com.android.kavi.erestaurant.services.connections;
  *
  * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
-public class ApiCalls extends ApiConnector {
+public class ApiCalls extends AsyncApiConnector {
 }

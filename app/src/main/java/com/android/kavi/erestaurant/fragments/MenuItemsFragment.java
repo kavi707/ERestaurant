@@ -9,11 +9,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
-import android.widget.Button;
 import android.widget.GridView;
-import android.widget.LinearLayout;
 
-import com.android.kavi.erestaurant.CommonUtils;
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.adapters.CustomGridViewAdapter;
 import com.android.kavi.erestaurant.dataObjs.GridItem;
@@ -25,9 +22,9 @@ import java.util.List;
  * Created by kavi707 on 5/27/15.
  * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
-public class CreateOrderFragment extends Fragment {
+public class MenuItemsFragment extends Fragment {
 
-    private View createOrderFragmentView;
+    private View menuItemFragmentView;
 
     private GridView menuItemGridView;
     private CustomGridViewAdapter customGridViewAdapter;
@@ -37,10 +34,10 @@ public class CreateOrderFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        createOrderFragmentView = inflater.inflate(R.layout.fragment_create_order, container, false);
+        menuItemFragmentView = inflater.inflate(R.layout.fragment_menu_items, container, false);
         setUpViews();
 
-        return createOrderFragmentView;
+        return menuItemFragmentView;
     }
 
     private void setUpViews() {
@@ -51,7 +48,7 @@ public class CreateOrderFragment extends Fragment {
         gridViewItems.add(new GridItem(defaultMealIcon, "Noodles"));
         gridViewItems.add(new GridItem(defaultMealIcon, "Soups"));
 
-        menuItemGridView = (GridView) createOrderFragmentView.findViewById(R.id.menuItemGridView);
+        menuItemGridView = (GridView) menuItemFragmentView.findViewById(R.id.menuItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
         menuItemGridView.setAdapter(customGridViewAdapter);
 

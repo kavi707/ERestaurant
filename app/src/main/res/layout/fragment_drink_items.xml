@@ -5,11 +5,17 @@
     android:background="@color/grey400"
     android:orientation="vertical" >
 
-    <ListView
-        android:layout_width="wrap_content"
+    <GridView
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/ordersListView"
+        android:id="@+id/drinksItemGridView"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/ordersLinearLayout" />
+        android:horizontalSpacing="10dp"
+        android:verticalSpacing="10dp"
+        android:columnWidth="150dp"
+        android:layout_margin="15dp"
+        android:gravity="center"
+        android:numColumns="auto_fit"
+        android:stretchMode="columnWidth"/>
 
 </RelativeLayout>

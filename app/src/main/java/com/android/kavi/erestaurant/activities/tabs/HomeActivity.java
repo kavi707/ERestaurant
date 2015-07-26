@@ -1,6 +1,7 @@
 package com.android.kavi.erestaurant.activities.tabs;
 
 import android.support.v4.view.ViewPager;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -25,7 +26,7 @@ public class HomeActivity extends ActionBarActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[]={"Orders","Create Order"};
+    CharSequence Titles[]={"Menus","Drinks"};
     int Numboftabs =2;
 
     private CommonServices commonServices = new CommonServices();
@@ -35,6 +36,11 @@ public class HomeActivity extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.tab_activity_home);
 
+        // Set App Icon on ActionBar
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setDisplayOptions(ActionBar.DISPLAY_SHOW_HOME | ActionBar.DISPLAY_SHOW_TITLE);
+        actionBar.setIcon(R.drawable.logo);
 
         // Find device dimensions
         CommonUtils.DEVICE_DIMENSIONS = commonServices.getDeviceWidthAndHeight(this);

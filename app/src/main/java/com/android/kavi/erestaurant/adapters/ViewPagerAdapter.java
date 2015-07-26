@@ -4,8 +4,8 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.android.kavi.erestaurant.fragments.CreateOrderFragment;
-import com.android.kavi.erestaurant.fragments.OrdersFragment;
+import com.android.kavi.erestaurant.fragments.MenuItemsFragment;
+import com.android.kavi.erestaurant.fragments.DrinkItemsFragment;
 
 /**
  * Created by kavi707 on 6/1/15.
@@ -32,12 +32,12 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            OrdersFragment ordersFragment = new OrdersFragment();
+            DrinkItemsFragment ordersFragment = new DrinkItemsFragment();
             return ordersFragment;
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            CreateOrderFragment createOrderFragment = new CreateOrderFragment();
+            MenuItemsFragment createOrderFragment = new MenuItemsFragment();
             return createOrderFragment;
         }
 

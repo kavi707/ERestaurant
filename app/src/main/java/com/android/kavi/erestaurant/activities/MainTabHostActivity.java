@@ -14,6 +14,7 @@ import com.android.kavi.erestaurant.activities.tabs.HomeActivity;
 
 /**
  * Created by kavi707 on 7/12/15.
+ * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
 public class MainTabHostActivity extends TabActivity {
 
