@@ -26,7 +26,7 @@ public class HomeActivity extends ActionBarActivity {
     ViewPager pager;
     ViewPagerAdapter adapter;
     SlidingTabLayout tabs;
-    CharSequence Titles[]={"Menus","Drinks"};
+    CharSequence Titles[]={"Foods","Drinks"};
     int Numboftabs =2;
 
     private CommonServices commonServices = new CommonServices();

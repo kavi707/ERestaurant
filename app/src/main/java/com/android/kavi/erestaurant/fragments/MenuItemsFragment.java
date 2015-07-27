@@ -1,5 +1,6 @@
 package com.android.kavi.erestaurant.fragments;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.GridView;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.activities.SelectedItemsActivity;
 import com.android.kavi.erestaurant.adapters.CustomGridViewAdapter;
 import com.android.kavi.erestaurant.dataObjs.GridItem;
 
@@ -42,11 +44,13 @@ public class MenuItemsFragment extends Fragment {
 
     private void setUpViews() {
 
-        Bitmap defaultMealIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.default_meal_image);
+        Bitmap riceIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.rice_image);
+        Bitmap noodlesIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.noodles_image);
+        Bitmap chopcyIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.chopcy_image);
 
-        gridViewItems.add(new GridItem(defaultMealIcon, "Rice"));
-        gridViewItems.add(new GridItem(defaultMealIcon, "Noodles"));
-        gridViewItems.add(new GridItem(defaultMealIcon, "Soups"));
+        gridViewItems.add(new GridItem(riceIcon, "Rice"));
+        gridViewItems.add(new GridItem(noodlesIcon, "Noodles"));
+        gridViewItems.add(new GridItem(chopcyIcon, "Chopcy"));
 
         menuItemGridView = (GridView) menuItemFragmentView.findViewById(R.id.menuItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
@@ -56,6 +60,8 @@ public class MenuItemsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("Grid Item pos: ", ">>>>>>>>>>>>>>>>>>>>>> " + position);
+                Intent selectedItemIntent = new Intent(getActivity(), SelectedItemsActivity.class);
+                startActivity(selectedItemIntent);
             }
         });
         // End of loading data to grid view

@@ -1,5 +1,6 @@
 package com.android.kavi.erestaurant.fragments;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
@@ -13,6 +14,7 @@ import android.widget.GridView;
 import android.widget.ListView;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.activities.SelectedItemsActivity;
 import com.android.kavi.erestaurant.adapters.CustomGridViewAdapter;
 import com.android.kavi.erestaurant.adapters.OrderItemAdapter;
 import com.android.kavi.erestaurant.dataObjs.GridItem;
@@ -45,11 +47,11 @@ public class DrinkItemsFragment extends Fragment {
 
     private void setUpViews() {
 
-        Bitmap defaultMealIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.default_meal_image);
+        Bitmap softDrinksIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.soft_image);
+        Bitmap bearIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.bear_image);
 
-        gridViewItems.add(new GridItem(defaultMealIcon, "Rice"));
-        gridViewItems.add(new GridItem(defaultMealIcon, "Noodles"));
-        gridViewItems.add(new GridItem(defaultMealIcon, "Soups"));
+        gridViewItems.add(new GridItem(softDrinksIcon, "Soft Drinks"));
+        gridViewItems.add(new GridItem(bearIcon, "Bear"));
 
         drinkItemGridView = (GridView) drinkItemFragmentView.findViewById(R.id.drinksItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
@@ -59,6 +61,8 @@ public class DrinkItemsFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("Grid Item pos: ", ">>>>>>>>>>>>>>>>>>>>>> " + position);
+                Intent selectedItemIntent = new Intent(getActivity(), SelectedItemsActivity.class);
+                startActivity(selectedItemIntent);
             }
         });
         // End with List View

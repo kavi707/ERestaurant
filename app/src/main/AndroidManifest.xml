@@ -22,6 +22,7 @@
         <activity android:name=".activities.tabs.ActiveTablesActivity"/>
         <activity android:name=".activities.tabs.ReadyItemsActivity"/>
         <activity android:name=".activities.tabs.SearchActivity"/>
+        <activity android:name=".activities.SelectedItemsActivity"/>
     </application>
 
 </manifest>

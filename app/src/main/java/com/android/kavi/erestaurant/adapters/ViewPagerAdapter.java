@@ -32,13 +32,13 @@ public class ViewPagerAdapter extends FragmentStatePagerAdapter {
 
         if(position == 0) // if the position is 0 we are returning the First tab
         {
-            DrinkItemsFragment ordersFragment = new DrinkItemsFragment();
-            return ordersFragment;
+            MenuItemsFragment menuItemsFragment = new MenuItemsFragment();
+            return menuItemsFragment;
         }
         else             // As we are having 2 tabs if the position is now 0 it must be 1 so we are returning second tab
         {
-            MenuItemsFragment createOrderFragment = new MenuItemsFragment();
-            return createOrderFragment;
+            DrinkItemsFragment drinkItemsFragment = new DrinkItemsFragment();
+            return drinkItemsFragment;
         }
 
 

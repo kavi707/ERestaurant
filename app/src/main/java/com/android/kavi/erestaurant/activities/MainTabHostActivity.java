@@ -31,28 +31,28 @@ public class MainTabHostActivity extends TabActivity {
         Intent intentHome = new Intent().setClass(this, HomeActivity.class);
         TabHost.TabSpec tabSpecHome = tabHost
                 .newTabSpec("Home")
-                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
+                .setIndicator("", ressources.getDrawable(R.drawable.home_image))
                 .setContent(intentHome);
 
         // Active Tables tab
         Intent intentActiveTabs = new Intent().setClass(this, ActiveTablesActivity.class);
         TabHost.TabSpec tabSpecActiveTables = tabHost
                 .newTabSpec("Active Tables")
-                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
+                .setIndicator("", ressources.getDrawable(R.drawable.table_image))
                 .setContent(intentActiveTabs);
 
         // Search tab
         Intent intentSearch = new Intent().setClass(this, SearchActivity.class);
         TabHost.TabSpec tabSpecSearch = tabHost
                 .newTabSpec("Search")
-                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
+                .setIndicator("", ressources.getDrawable(R.drawable.search_image))
                 .setContent(intentSearch);
 
         // Ready Items tab
         Intent intentReadyItems = new Intent().setClass(this, ReadyItemsActivity.class);
         TabHost.TabSpec tabSpecReadyItems = tabHost
                 .newTabSpec("Ready Items")
-                .setIndicator("", ressources.getDrawable(R.drawable.default_meal_image))
+                .setIndicator("", ressources.getDrawable(R.drawable.thubms_image))
                 .setContent(intentReadyItems);
 
 
