@@ -6,9 +6,7 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.android.kavi.erestaurant.R;
-import com.android.kavi.erestaurant.dataObjs.OrderItem;
 import com.android.kavi.erestaurant.dataObjs.SelectedItem;
-import com.android.kavi.erestaurant.views.OrderListItem;
 import com.android.kavi.erestaurant.views.SelectedListItem;
 
 import java.util.List;

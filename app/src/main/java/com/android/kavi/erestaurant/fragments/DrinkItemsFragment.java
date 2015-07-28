@@ -11,14 +11,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.activities.SelectedItemsActivity;
 import com.android.kavi.erestaurant.adapters.CustomGridViewAdapter;
-import com.android.kavi.erestaurant.adapters.OrderItemAdapter;
 import com.android.kavi.erestaurant.dataObjs.GridItem;
-import com.android.kavi.erestaurant.dataObjs.OrderItem;
 
 import java.util.ArrayList;
 import java.util.List;

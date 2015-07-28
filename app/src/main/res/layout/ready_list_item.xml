@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.kavi.erestaurant.views.ReadyItemsListItem
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/readyItemName"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/moreReadyItemButton"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/moreReadyItemButton"
+            android:layout_toStartOf="@+id/moreReadyItemButton"
+            android:gravity="center_vertical"
+            android:text="Ready Item Name"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/doneButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/moreReadyItemButton"
+            android:layout_marginRight="5dp"
+            android:text="Done" />
+
+        <Button
+            android:id="@+id/moreReadyItemButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/doneButton"
+            android:layout_toStartOf="@+id/doneButton"
+            android:text="More" />
+
+        <TextView
+            android:id="@+id/servedTableName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/readyItemName"
+            android:layout_alignStart="@+id/readyItemName"
+            android:layout_below="@+id/readyItemName"
+            android:layout_toLeftOf="@+id/moreReadyItemButton"
+            android:layout_toStartOf="@+id/moreReadyItemButton"
+            android:text="Small Text"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
+
+
+</com.android.kavi.erestaurant.views.ReadyItemsListItem>

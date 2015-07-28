@@ -2,12 +2,10 @@ package com.android.kavi.erestaurant.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.kavi.erestaurant.R;
-import com.android.kavi.erestaurant.dataObjs.OrderItem;
 import com.android.kavi.erestaurant.dataObjs.SelectedItem;
 
 /**

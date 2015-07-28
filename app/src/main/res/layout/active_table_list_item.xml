@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.kavi.erestaurant.views.ActiveTableListItem xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <TextView
+            android:id="@+id/tableNumberTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignTop="@+id/detailsButton"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/detailsButton"
+            android:layout_toStartOf="@+id/detailsButton"
+            android:gravity="center_vertical"
+            android:text="Table Number"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:typeface="normal" />
+
+        <Button
+            android:id="@+id/billButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/detailsButton"
+            android:layout_marginRight="5dp"
+            android:text="Bill" />
+
+        <Button
+            android:id="@+id/detailsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/billButton"
+            android:layout_toStartOf="@+id/billButton"
+            android:text="Details" />
+
+        <TextView
+            android:id="@+id/lastItemsNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tableNumberTextView"
+            android:layout_alignStart="@+id/tableNumberTextView"
+            android:layout_below="@+id/tableNumberTextView"
+            android:layout_toLeftOf="@+id/detailsButton"
+            android:layout_toStartOf="@+id/detailsButton"
+            android:text="Small Text"
+            android:layout_marginLeft="5dp"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    </RelativeLayout>
+
+
+</com.android.kavi.erestaurant.views.ActiveTableListItem>
