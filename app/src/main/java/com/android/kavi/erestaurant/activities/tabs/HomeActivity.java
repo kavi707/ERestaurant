@@ -60,7 +60,7 @@ public class HomeActivity extends ActionBarActivity {
         tabs.setCustomTabColorizer(new SlidingTabLayout.TabColorizer() {
             @Override
             public int getIndicatorColor(int position) {
-                return getResources().getColor(R.color.tabsScrollColor);
+                return getResources().getColor(R.color.grey600);
             }
         });
 
@@ -69,7 +69,7 @@ public class HomeActivity extends ActionBarActivity {
     }
 
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -89,5 +89,5 @@ public class HomeActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 }
