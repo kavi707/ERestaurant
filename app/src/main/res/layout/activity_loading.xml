@@ -5,13 +5,11 @@
     android:layout_height="match_parent"
     tools:context=".activities.LoadingActivity">
 
-    <TextView
-        android:text="@string/loading_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="30dp"
-        android:id="@+id/loadingTitleTextView"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
+    <ImageView
+        android:id="@+id/imgLogo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:background="@color/splash_black"
+        android:src="@drawable/splash_screen" />
 </RelativeLayout>

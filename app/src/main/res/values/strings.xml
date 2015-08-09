@@ -9,7 +9,7 @@
 
     <string name="username_hint_label">Username</string>
     <string name="password_hint_label">Password</string>
-    <string name="login_btn_label">Log In</string>
+    <string name="login_btn_label">LOGIN</string>
 
     <string name="menu_items_btn_label">Menu Items</string>
     <string name="meals_btn_label">Meals</string>

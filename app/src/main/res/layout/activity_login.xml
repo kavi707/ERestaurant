@@ -1,44 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:background="@color/grey400"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/splash_black"
+    android:orientation="vertical">
 
-
-    <EditText
+    <ImageView
+        android:id="@+id/loginLogoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/usernameEditText"
+        android:layout_above="@+id/usernameRelativeContainer"
+        android:layout_alignEnd="@+id/usernameRelativeContainer"
+        android:layout_alignLeft="@+id/usernameRelativeContainer"
+        android:layout_alignRight="@+id/usernameRelativeContainer"
+        android:layout_alignStart="@+id/usernameRelativeContainer"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/logo" />
+
+    <RelativeLayout
+        android:id="@+id/usernameRelativeContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/passwordRelativeContainer"
+        android:layout_alignLeft="@+id/passwordRelativeContainer"
+        android:layout_alignRight="@+id/passwordRelativeContainer"
+        android:layout_alignStart="@+id/passwordRelativeContainer"
         android:layout_centerVertical="true"
-        android:hint="@string/username_hint_label"
-        android:gravity="center"
-        android:layout_alignLeft="@+id/passwordEditText"
-        android:layout_alignStart="@+id/passwordEditText"
-        android:layout_alignRight="@+id/passwordEditText"
-        android:layout_alignEnd="@+id/passwordEditText" />
+        android:layout_marginTop="30dp">
 
-    <EditText
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/default_meal_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <EditText
+                android:id="@+id/usernameEditText"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/username_hint_label"
+                android:textColorHint="@color/grey600"
+                android:background="@color/splash_black"
+                android:textColor="@color/grey500"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/passwordRelativeContainer"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:hint="@string/password_hint_label"
-        android:gravity="center"
-        android:id="@+id/passwordEditText"
-        android:layout_below="@+id/usernameEditText"
-        android:layout_centerHorizontal="true" />
+        android:layout_below="@+id/usernameRelativeContainer"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:ems="10">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/default_meal_image"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <EditText
+                android:id="@+id/passwordEditText"
+                android:layout_width="400dp"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:hint="@string/password_hint_label"
+                android:textColorHint="@color/grey600"
+                android:textColor="@color/grey500"
+                android:background="@color/splash_black"
+                android:inputType="textPassword" />
+        </LinearLayout>
+    </RelativeLayout>
 
     <Button
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/login_btn_label"
-        android:id="@+id/loginButton"
-        android:background="@color/red400"
-        android:layout_below="@+id/passwordEditText"
-        android:layout_alignLeft="@+id/passwordEditText"
-        android:layout_alignStart="@+id/passwordEditText"
-        android:layout_alignRight="@+id/passwordEditText"
-        android:layout_alignEnd="@+id/passwordEditText" />
+        android:layout_marginTop="20dp"
+        android:textSize="25dp"
+        android:layout_alignEnd="@+id/passwordRelativeContainer"
+        android:layout_alignLeft="@+id/passwordRelativeContainer"
+        android:layout_alignRight="@+id/passwordRelativeContainer"
+        android:layout_alignStart="@+id/passwordRelativeContainer"
+        android:layout_below="@+id/passwordRelativeContainer"
+        android:background="@drawable/round_corner"
+        android:text="@string/login_btn_label" />
 </RelativeLayout>
