@@ -1,8 +1,6 @@
 package com.android.kavi.erestaurant.fragments;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -48,8 +46,9 @@ public class MenuItemsFragment extends Fragment {
         gridViewItems.add(new GridItem("Noodles"));
         gridViewItems.add(new GridItem("Chopcy"));
         gridViewItems.add(new GridItem("Curry"));
+        gridViewItems.add(new GridItem("Rice & Curry"));
 
-        menuItemGridView = (GridView) menuItemFragmentView.findViewById(R.id.menuItemGridView);
+        menuItemGridView = (GridView) menuItemFragmentView.findViewById(R.id.foodItemGridView);
         customGridViewAdapter = new CustomGridViewAdapter(gridViewItems, getActivity());
         menuItemGridView.setAdapter(customGridViewAdapter);
 
