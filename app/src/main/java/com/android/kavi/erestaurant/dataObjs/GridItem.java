@@ -8,20 +8,13 @@ import android.graphics.Bitmap;
  */
 public class GridItem {
 
-    Bitmap image;
     String title;
 
-    public GridItem(Bitmap image, String title) {
+    public GridItem(String title) {
         super();
-        this.image = image;
         this.title = title;
     }
-    public Bitmap getImage() {
-        return image;
-    }
-    public void setImage(Bitmap image) {
-        this.image = image;
-    }
+
     public String getTitle() {
         return title;
     }

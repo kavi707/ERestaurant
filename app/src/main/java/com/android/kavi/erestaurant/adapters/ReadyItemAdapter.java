@@ -6,10 +6,8 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.android.kavi.erestaurant.R;
-import com.android.kavi.erestaurant.dataObjs.ActiveTableItem;
 import com.android.kavi.erestaurant.dataObjs.ReadyItem;
-import com.android.kavi.erestaurant.views.ActiveTableListItem;
-import com.android.kavi.erestaurant.views.ReadyItemsListItem;
+import com.android.kavi.erestaurant.views.ReadyItemsListItemView;
 
 import java.util.List;
 
@@ -45,11 +43,11 @@ public class ReadyItemAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ReadyItemsListItem readyItemListItem;
+        ReadyItemsListItemView readyItemListItem;
         if (convertView == null) {
-            readyItemListItem = (ReadyItemsListItem) View.inflate(context, R.layout.ready_list_item, null);
+            readyItemListItem = (ReadyItemsListItemView) View.inflate(context, R.layout.ready_list_item, null);
         } else {
-            readyItemListItem = (ReadyItemsListItem) convertView;
+            readyItemListItem = (ReadyItemsListItemView) convertView;
         }
 
         readyItemListItem.setReadyItem(readyItemList.get(position));

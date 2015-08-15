@@ -92,6 +92,6 @@
         android:layout_alignRight="@+id/passwordRelativeContainer"
         android:layout_alignStart="@+id/passwordRelativeContainer"
         android:layout_below="@+id/passwordRelativeContainer"
-        android:background="@drawable/round_corner"
+        android:background="@drawable/round_corner_btn"
         android:text="@string/login_btn_label" />
 </RelativeLayout>

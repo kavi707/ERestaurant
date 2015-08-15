@@ -12,14 +12,14 @@ import com.android.kavi.erestaurant.dataObjs.ActiveTableItem;
  * Created by kavi707 on 6/2/15.
  * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
-public class ActiveTableListItem extends RelativeLayout {
+public class ActiveTableListItemView extends RelativeLayout {
 
     private TextView tableNumberTextView;
     private TextView lastItemNameTextView;
 
     private ActiveTableItem activeTableListItem;
 
-    public ActiveTableListItem(Context context, AttributeSet attrs) {
+    public ActiveTableListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

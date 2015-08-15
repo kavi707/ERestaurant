@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.dataObjs.SelectedItem;
-import com.android.kavi.erestaurant.views.SelectedListItem;
+import com.android.kavi.erestaurant.views.SelectedListItemView;
 
 import java.util.List;
 
@@ -43,11 +43,11 @@ public class SelectedItemAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        SelectedListItem selectedListItem;
+        SelectedListItemView selectedListItem;
         if (convertView == null) {
-            selectedListItem = (SelectedListItem) View.inflate(context, R.layout.selected_list_item, null);
+            selectedListItem = (SelectedListItemView) View.inflate(context, R.layout.selected_list_item, null);
         } else {
-            selectedListItem = (SelectedListItem) convertView;
+            selectedListItem = (SelectedListItemView) convertView;
         }
 
         selectedListItem.setSelectedItem(selectedItemList.get(position));

@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.dataObjs.ActiveTableItem;
-import com.android.kavi.erestaurant.views.ActiveTableListItem;
+import com.android.kavi.erestaurant.views.ActiveTableListItemView;
 
 import java.util.List;
 
@@ -43,11 +43,11 @@ public class ActiveTableItemAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ActiveTableListItem activeTableListItem;
+        ActiveTableListItemView activeTableListItem;
         if (convertView == null) {
-            activeTableListItem = (ActiveTableListItem) View.inflate(context, R.layout.active_table_list_item, null);
+            activeTableListItem = (ActiveTableListItemView) View.inflate(context, R.layout.active_table_list_item, null);
         } else {
-            activeTableListItem = (ActiveTableListItem) convertView;
+            activeTableListItem = (ActiveTableListItemView) convertView;
         }
 
         activeTableListItem.setOrderItem(activeTableList.get(position));

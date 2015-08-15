@@ -1,16 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<com.android.kavi.erestaurant.views.GridItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="150dp"
     android:layout_height="150dp"
     android:orientation="vertical"
-    android:background="@color/black"
-    android:weightSum="1">
+    android:background="@color/splash_black">
 
-    <ImageView
-        android:id="@+id/item_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:src="@drawable/default_meal_image">
-    </ImageView>
-</LinearLayout>
+
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center"
+        android:text="Item Name"
+        android:textColor="@color/grey200"
+        android:id="@+id/gridItemTextView"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</com.android.kavi.erestaurant.views.GridItemView>

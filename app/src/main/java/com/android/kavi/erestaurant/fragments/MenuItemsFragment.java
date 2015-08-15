@@ -36,7 +36,7 @@ public class MenuItemsFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
-        menuItemFragmentView = inflater.inflate(R.layout.fragment_menu_items, container, false);
+        menuItemFragmentView = inflater.inflate(R.layout.fragment_food_items, container, false);
         setUpViews();
 
         return menuItemFragmentView;
@@ -44,16 +44,13 @@ public class MenuItemsFragment extends Fragment {
 
     private void setUpViews() {
 
-        Bitmap riceIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.rice_image);
-        Bitmap noodlesIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.noodles_image);
-        Bitmap chopcyIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.chopcy_image);
-
-        gridViewItems.add(new GridItem(riceIcon, "Rice"));
-        gridViewItems.add(new GridItem(noodlesIcon, "Noodles"));
-        gridViewItems.add(new GridItem(chopcyIcon, "Chopcy"));
+        gridViewItems.add(new GridItem("Rice"));
+        gridViewItems.add(new GridItem("Noodles"));
+        gridViewItems.add(new GridItem("Chopcy"));
+        gridViewItems.add(new GridItem("Curry"));
 
         menuItemGridView = (GridView) menuItemFragmentView.findViewById(R.id.menuItemGridView);
-        customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
+        customGridViewAdapter = new CustomGridViewAdapter(gridViewItems, getActivity());
         menuItemGridView.setAdapter(customGridViewAdapter);
 
         menuItemGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

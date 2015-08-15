@@ -12,14 +12,14 @@ import com.android.kavi.erestaurant.dataObjs.SelectedItem;
  * Created by kavi707 on 6/2/15.
  * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
-public class SelectedListItem extends RelativeLayout {
+public class SelectedListItemView extends RelativeLayout {
 
     private TextView itemNameTextView;
     private TextView itemPriceTextView;
 
     private SelectedItem selectedListItem;
 
-    public SelectedListItem(Context context, AttributeSet attrs) {
+    public SelectedListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

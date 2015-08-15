@@ -44,14 +44,11 @@ public class DrinkItemsFragment extends Fragment {
 
     private void setUpViews() {
 
-        Bitmap softDrinksIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.soft_image);
-        Bitmap bearIcon = BitmapFactory.decodeResource(this.getResources(), R.drawable.bear_image);
-
-        gridViewItems.add(new GridItem(softDrinksIcon, "Soft Drinks"));
-        gridViewItems.add(new GridItem(bearIcon, "Bear"));
+        gridViewItems.add(new GridItem("Soft Drinks"));
+        gridViewItems.add(new GridItem("Bear"));
 
         drinkItemGridView = (GridView) drinkItemFragmentView.findViewById(R.id.drinksItemGridView);
-        customGridViewAdapter = new CustomGridViewAdapter(getActivity(), R.layout.grid_item, gridViewItems);
+        customGridViewAdapter = new CustomGridViewAdapter(gridViewItems, getActivity());
         drinkItemGridView.setAdapter(customGridViewAdapter);
 
         drinkItemGridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {

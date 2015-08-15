@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/dark_grey"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="fill_parent"
@@ -11,7 +11,7 @@
         android:background="@drawable/round_corners_bottom"
         android:layout_marginLeft="2dp"
         android:layout_marginRight="2dp"
-        android:id="@+id/drinkGridSearchRelativeLayout">
+        android:id="@+id/foodGridSearchRelativeLayout">
 
         <LinearLayout
             android:orientation="horizontal"
@@ -23,7 +23,7 @@
             android:weightSum="1">
 
             <EditText
-                android:id="@+id/drinkItemSearchEditText"
+                android:id="@+id/foodItemSearchEditText"
                 android:layout_width="80dp"
                 android:layout_height="match_parent"
                 android:background="@color/splash_black"
@@ -34,7 +34,7 @@
                 android:layout_weight="1.00" />
 
             <ImageButton
-                android:id="@+id/drinkItemSearchButton"
+                android:id="@+id/foodItemSearchButton"
                 android:background="@color/splash_black"
                 android:src="@drawable/search"
                 android:layout_marginTop="2dp"
@@ -43,20 +43,20 @@
                 android:layout_width="70dp"
                 android:layout_height="70dp" />
         </LinearLayout>
-
     </RelativeLayout>
 
     <GridView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/drinksItemGridView"
+        android:id="@+id/menuItemGridView"
         android:horizontalSpacing="10dp"
         android:verticalSpacing="10dp"
         android:columnWidth="150dp"
         android:gravity="center"
         android:numColumns="auto_fit"
         android:stretchMode="columnWidth"
-        android:layout_below="@+id/drinkGridSearchRelativeLayout"
-        android:layout_centerHorizontal="true" />
-
+        android:layout_below="@+id/foodGridSearchRelativeLayout"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>

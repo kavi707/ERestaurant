@@ -3,6 +3,7 @@
 
     <string name="action_me_label">Me</string>
     <string name="action_settings_label">Settings</string>
+    <string name="search_label">Search</string>
     <string name="action_logout_label">Log out</string>
 
     <string name="loading_title">Loading . . .</string>
