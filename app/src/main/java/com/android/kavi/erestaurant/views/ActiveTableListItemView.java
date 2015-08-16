@@ -2,6 +2,7 @@ package com.android.kavi.erestaurant.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,10 +15,12 @@ import com.android.kavi.erestaurant.dataObjs.ActiveTableItem;
  */
 public class ActiveTableListItemView extends RelativeLayout {
 
-    private TextView tableNumberTextView;
-    private TextView lastItemNameTextView;
+    private TextView tableNameTextView;
+    private LinearLayout tableNameLinearLayout;
+    private LinearLayout billLinearLayout;
+    private LinearLayout addItemLinearLayout;
 
-    private ActiveTableItem activeTableListItem;
+    private ActiveTableItem activeTableItem;
 
     public ActiveTableListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -27,18 +30,19 @@ public class ActiveTableListItemView extends RelativeLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        tableNumberTextView = (TextView) findViewById(R.id.tableNumberTextView);
-        lastItemNameTextView = (TextView) findViewById(R.id.lastItemsNameTextView);
+        tableNameTextView = (TextView) findViewById(R.id.activeTableNameTextView);
+        tableNameLinearLayout = (LinearLayout) findViewById(R.id.activeTableNameLinearLayout);
+        billLinearLayout = (LinearLayout) findViewById(R.id.activeTableBillLinearLayout);
+        addItemLinearLayout = (LinearLayout) findViewById(R.id.activeTableAddItemLinearLayout);
     }
 
-    public ActiveTableItem getOrderItem() {
-        return activeTableListItem;
+    public ActiveTableItem getActiveTableItem() {
+        return activeTableItem;
     }
 
-    public void setOrderItem(ActiveTableItem activeTableListItem) {
-        this.activeTableListItem = activeTableListItem;
+    public void setActiveTableItem(ActiveTableItem activeTableItem) {
+        this.activeTableItem = activeTableItem;
 
-        tableNumberTextView.setText(activeTableListItem.getTableNumber());
-        lastItemNameTextView.setText(activeTableListItem.getLastItemName());
+        tableNameTextView.setText(activeTableItem.getActiveTableName());
     }
 }

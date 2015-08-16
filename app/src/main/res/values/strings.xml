@@ -20,4 +20,8 @@
     <string name="in_progress_btn_label">In Progress</string>
     <string name="completed_orders_btn_label">Completed</string>
     <string name="canceled_orders_btn_label">Canceled</string>
+
+    <string name="active_table_heading_label">ACTIVE TABLES</string>
+    <string name="active_table_bill_label">Bill</string>
+    <string name="active_table_add_item_label">Add Item</string>
 </resources>

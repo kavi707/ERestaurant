@@ -45,9 +45,9 @@ public class ActiveTablesActivity extends ActionBarActivity {
 
         activeTablesListView = (ListView) findViewById(R.id.activeTablesListView);
 
-        activeTableList.add(new ActiveTableItem("Table 04", "vegetable fried rice"));
-        activeTableList.add(new ActiveTableItem("Table 09", "mix fried rice"));
-        activeTableList.add(new ActiveTableItem("Table 02", "chicken fried rice"));
+        activeTableList.add(new ActiveTableItem("4", "TABLE 04"));
+        activeTableList.add(new ActiveTableItem("9", "TABLE 09"));
+        activeTableList.add(new ActiveTableItem("2", "TABLE 02"));
 
         activeTableAdapter = new ActiveTableItemAdapter(activeTableList, context);
         activeTablesListView.setAdapter(activeTableAdapter);

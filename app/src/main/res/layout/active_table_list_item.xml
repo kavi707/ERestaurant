@@ -1,61 +1,86 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.kavi.erestaurant.views.ActiveTableListItemView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.android.kavi.erestaurant.views.ActiveTableListItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="100dp"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
+    <FrameLayout
+        android:background="@color/splash_black"
+        android:layout_width="fill_parent"
         android:layout_height="100dp">
 
-        <TextView
-            android:id="@+id/tableNumberTextView"
-            android:layout_width="fill_parent"
-            android:layout_height="30dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/detailsButton"
-            android:layout_marginLeft="15dp"
-            android:layout_toLeftOf="@+id/detailsButton"
-            android:layout_toStartOf="@+id/detailsButton"
-            android:gravity="center_vertical"
-            android:text="Table Number"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:typeface="normal" />
 
-        <Button
-            android:id="@+id/billButton"
+        <LinearLayout
+            android:id="@+id/activeTableNameLinearLayout"
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignTop="@+id/detailsButton"
-            android:layout_marginRight="5dp"
-            android:text="Bill" />
+            android:layout_gravity="left|center_vertical">
 
-        <Button
-            android:id="@+id/detailsButton"
+            <ImageView
+                android:layout_margin="10dp"
+                android:src="@drawable/table"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:textColor="@color/grey200"
+                android:textSize="20dp"
+                android:text="Table Name"
+                android:id="@+id/activeTableNameTextView"
+                android:gravity="center_vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activeTableBillLinearLayout"
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_toLeftOf="@+id/billButton"
-            android:layout_toStartOf="@+id/billButton"
-            android:text="Details" />
+            android:layout_gravity="center">
 
-        <TextView
-            android:id="@+id/lastItemsNameTextView"
+            <ImageView
+                android:src="@drawable/add_bill"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
+
+            <TextView
+                android:textColor="@color/grey200"
+                android:textSize="20dp"
+                android:text="@string/active_table_bill_label"
+                android:gravity="center_vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/activeTableAddItemLinearLayout"
+            android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/tableNumberTextView"
-            android:layout_alignStart="@+id/tableNumberTextView"
-            android:layout_below="@+id/tableNumberTextView"
-            android:layout_toLeftOf="@+id/detailsButton"
-            android:layout_toStartOf="@+id/detailsButton"
-            android:text="Small Text"
-            android:layout_marginLeft="5dp"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:layout_gravity="right|center_vertical">
 
-    </RelativeLayout>
+            <ImageView
+                android:src="@drawable/add_item"
+                android:layout_width="60dp"
+                android:layout_height="60dp" />
 
+            <TextView
+                android:textColor="@color/grey200"
+                android:textSize="20dp"
+                android:text="@string/active_table_add_item_label"
+                android:gravity="center_vertical"
+                android:layout_width="100dp"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:background="@color/grey200"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="2dp" />
 
 </com.android.kavi.erestaurant.views.ActiveTableListItemView>

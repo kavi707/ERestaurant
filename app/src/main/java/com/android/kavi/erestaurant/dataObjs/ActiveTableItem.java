@@ -6,27 +6,27 @@ package com.android.kavi.erestaurant.dataObjs;
  */
 public class ActiveTableItem {
 
-    private String tableNumber;
-    private String lastItemName;
+    private String activeTableName;
+    private String activeTableId;
 
-    public ActiveTableItem(String tableNumber, String lastItemName) {
-        this.tableNumber = tableNumber;
-        this.lastItemName = lastItemName;
+    public ActiveTableItem(String activeTableId, String activeTableName) {
+        this.activeTableId = activeTableId;
+        this.activeTableName = activeTableName;
     }
 
-    public String getTableNumber() {
-        return tableNumber;
+    public String getActiveTableName() {
+        return activeTableName;
     }
 
-    public void setTableNumber(String tableNumber) {
-        this.tableNumber = tableNumber;
+    public void setActiveTableName(String activeTableName) {
+        this.activeTableName = activeTableName;
     }
 
-    public String getLastItemName() {
-        return lastItemName;
+    public String getActiveTableId() {
+        return activeTableId;
     }
 
-    public void setLastItemName(String lastItemName) {
-        this.lastItemName = lastItemName;
+    public void setActiveTableId(String activeTableId) {
+        this.activeTableId = activeTableId;
     }
 }

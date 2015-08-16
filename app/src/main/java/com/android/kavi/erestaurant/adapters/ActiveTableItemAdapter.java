@@ -50,7 +50,7 @@ public class ActiveTableItemAdapter extends BaseAdapter {
             activeTableListItem = (ActiveTableListItemView) convertView;
         }
 
-        activeTableListItem.setOrderItem(activeTableList.get(position));
+        activeTableListItem.setActiveTableItem(activeTableList.get(position));
         return activeTableListItem;
     }
 }
