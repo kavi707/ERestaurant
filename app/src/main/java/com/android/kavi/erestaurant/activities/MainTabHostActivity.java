@@ -34,19 +34,19 @@ public class MainTabHostActivity extends TabActivity {
                 .setIndicator("", ressources.getDrawable(R.drawable.home_image))
                 .setContent(intentHome);
 
-        // Active Tables tab
-        Intent intentActiveTabs = new Intent().setClass(this, ActiveTablesActivity.class);
-        TabHost.TabSpec tabSpecActiveTables = tabHost
-                .newTabSpec("Active Tables")
-                .setIndicator("", ressources.getDrawable(R.drawable.table_image))
-                .setContent(intentActiveTabs);
-
         // Search tab
         Intent intentSearch = new Intent().setClass(this, SearchActivity.class);
         TabHost.TabSpec tabSpecSearch = tabHost
                 .newTabSpec("Search")
                 .setIndicator("", ressources.getDrawable(R.drawable.search_image))
                 .setContent(intentSearch);
+
+        // Active Tables tab
+        Intent intentActiveTabs = new Intent().setClass(this, ActiveTablesActivity.class);
+        TabHost.TabSpec tabSpecActiveTables = tabHost
+                .newTabSpec("Active Tables")
+                .setIndicator("", ressources.getDrawable(R.drawable.table_image))
+                .setContent(intentActiveTabs);
 
         // Ready Items tab
         Intent intentReadyItems = new Intent().setClass(this, ReadyItemsActivity.class);
@@ -58,8 +58,8 @@ public class MainTabHostActivity extends TabActivity {
 
         // add all tabs
         tabHost.addTab(tabSpecHome);
-        tabHost.addTab(tabSpecActiveTables);
         tabHost.addTab(tabSpecSearch);
+        tabHost.addTab(tabSpecActiveTables);
         tabHost.addTab(tabSpecReadyItems);
 
         //set Windows tab as default (zero based)

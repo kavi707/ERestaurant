@@ -32,4 +32,16 @@
         android:background="@color/grey200"
         android:layout_alignParentRight="true"/>
 
+    <TextView
+        android:layout_width="1dp"
+        android:layout_height="150dp"
+        android:background="@color/grey200"
+        android:layout_alignParentLeft="true"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey200"
+        android:layout_alignParentTop="true" />
+
 </com.android.kavi.erestaurant.views.GridItemView>

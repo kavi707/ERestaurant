@@ -35,7 +35,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@drawable/default_meal_image"
+                android:src="@drawable/user"
+                android:padding="10dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp" />
             <EditText
@@ -65,7 +66,8 @@
             android:orientation="horizontal">
 
             <ImageView
-                android:src="@drawable/default_meal_image"
+                android:src="@drawable/password"
+                android:padding="10dp"
                 android:layout_width="50dp"
                 android:layout_height="50dp" />
             <EditText

@@ -10,49 +10,6 @@
         android:layout_height="fill_parent"
         android:weightSum="1">
 
-        <!--<RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="@color/red"
-            android:orientation="horizontal"
-            android:id="@+id/tabHostHeaderRelativeLayout">
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_centerVertical="true"
-                android:orientation="horizontal">
-
-                <ImageView
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:src="@drawable/mcdonald_logo" />
-
-                <RelativeLayout
-                    android:layout_marginLeft="8dp"
-                    android:layout_width="match_parent"
-                    android:layout_height="50dp">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentLeft="true"
-                        android:layout_alignParentStart="true"
-                        android:layout_centerVertical="true"
-                        android:text="@string/app_name"
-                        android:textAppearance="?android:attr/textAppearanceLarge"
-                        android:textColor="@color/white"
-                        android:textSize="22dp"
-                        android:textStyle="bold" />
-
-                </RelativeLayout>
-            </LinearLayout>
-        </RelativeLayout>-->
-
         <FrameLayout
             android:id="@android:id/tabcontent"
             android:layout_width="fill_parent"
