@@ -45,7 +45,7 @@ public class ActiveTableItemAdapter extends BaseAdapter {
 
         ActiveTableListItemView activeTableListItem;
         if (convertView == null) {
-            activeTableListItem = (ActiveTableListItemView) View.inflate(context, R.layout.active_table_list_item, null);
+            activeTableListItem = (ActiveTableListItemView) View.inflate(context, R.layout.list_item_active_table, null);
         } else {
             activeTableListItem = (ActiveTableListItemView) convertView;
         }

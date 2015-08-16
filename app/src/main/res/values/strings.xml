@@ -24,4 +24,6 @@
     <string name="active_table_heading_label">ACTIVE TABLES</string>
     <string name="active_table_bill_label">Bill</string>
     <string name="active_table_add_item_label">Add Item</string>
+    
+    <string name="ready_item_label">READY ITEMS</string>
 </resources>

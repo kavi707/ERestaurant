@@ -48,9 +48,9 @@ public class ReadyItemsActivity extends ActionBarActivity {
 
         readyItemsListView = (ListView) findViewById(R.id.readyItemsListView);
 
-        readyItemList.add(new ReadyItem("Vegetable fried rice", "Table 04"));
-        readyItemList.add(new ReadyItem("Mix fried rice", "Table 09"));
-        readyItemList.add(new ReadyItem("Chicken fried rice", "Table 02"));
+        readyItemList.add(new ReadyItem("Table 04", "Vegetable fried rice", 5));
+        readyItemList.add(new ReadyItem("Table 09", "Mix fried rice", 1));
+        readyItemList.add(new ReadyItem("Table 02", "Chicken fried rice", 3));
 
         readyItemAdapter = new ReadyItemAdapter(readyItemList, context);
         readyItemsListView.setAdapter(readyItemAdapter);

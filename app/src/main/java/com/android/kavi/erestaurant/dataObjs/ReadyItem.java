@@ -6,12 +6,14 @@ package com.android.kavi.erestaurant.dataObjs;
  */
 public class ReadyItem {
 
+    private String readyTableName;
     private String readyItemName;
-    private String severedTableNumber;
+    private int itemQty;
 
-    public ReadyItem(String readyItemName, String severedTableNumber) {
+    public ReadyItem(String readyItemName, String readyTableName, int itemQty) {
+        this.readyTableName = readyTableName;
         this.readyItemName = readyItemName;
-        this.severedTableNumber = severedTableNumber;
+        this.itemQty = itemQty;
     }
 
     public String getReadyItemName() {
@@ -22,11 +24,19 @@ public class ReadyItem {
         this.readyItemName = readyItemName;
     }
 
-    public String getSeveredTableNumber() {
-        return severedTableNumber;
+    public String getReadyTableName() {
+        return readyTableName;
     }
 
-    public void setSeveredTableNumber(String severedTableNumber) {
-        this.severedTableNumber = severedTableNumber;
+    public void setReadyTableName(String readyTableName) {
+        this.readyTableName = readyTableName;
+    }
+
+    public int getItemQty() {
+        return itemQty;
+    }
+
+    public void setItemQty(int itemQty) {
+        this.itemQty = itemQty;
     }
 }

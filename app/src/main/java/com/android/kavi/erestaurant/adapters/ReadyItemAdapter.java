@@ -20,8 +20,8 @@ public class ReadyItemAdapter extends BaseAdapter {
     private List<ReadyItem> readyItemList;
     private Context context;
 
-    public ReadyItemAdapter(List<ReadyItem> activeTableList, Context context) {
-        this.readyItemList = activeTableList;
+    public ReadyItemAdapter(List<ReadyItem> readyItemList, Context context) {
+        this.readyItemList = readyItemList;
         this.context = context;
     }
 
@@ -45,7 +45,7 @@ public class ReadyItemAdapter extends BaseAdapter {
 
         ReadyItemsListItemView readyItemListItem;
         if (convertView == null) {
-            readyItemListItem = (ReadyItemsListItemView) View.inflate(context, R.layout.ready_list_item, null);
+            readyItemListItem = (ReadyItemsListItemView) View.inflate(context, R.layout.list_item_ready, null);
         } else {
             readyItemListItem = (ReadyItemsListItemView) convertView;
         }

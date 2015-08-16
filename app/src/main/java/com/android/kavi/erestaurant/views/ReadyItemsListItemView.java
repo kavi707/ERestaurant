@@ -2,6 +2,7 @@ package com.android.kavi.erestaurant.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -15,8 +16,9 @@ import com.android.kavi.erestaurant.dataObjs.ReadyItem;
  */
 public class ReadyItemsListItemView extends RelativeLayout {
 
+    private TextView readyTableNameTextView;
     private TextView readyItemNameTextView;
-    private TextView servedTableNumberTextView;
+    private TextView itemQtyTextView;
 
     private ReadyItem readyItem;
 
@@ -28,8 +30,9 @@ public class ReadyItemsListItemView extends RelativeLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
-        readyItemNameTextView = (TextView) findViewById(R.id.readyItemName);
-        servedTableNumberTextView = (TextView) findViewById(R.id.servedTableName);
+        readyTableNameTextView = (TextView) findViewById(R.id.readyTableNameTextView);
+        readyItemNameTextView = (TextView) findViewById(R.id.readyItemNameTextView);
+        itemQtyTextView = (TextView) findViewById(R.id.itemQtyTextView);
     }
 
     public ReadyItem getReadyItem() {
@@ -39,7 +42,8 @@ public class ReadyItemsListItemView extends RelativeLayout {
     public void setReadyItem(ReadyItem readyItem) {
         this.readyItem = readyItem;
 
+        readyTableNameTextView.setText(readyItem.getReadyTableName());
         readyItemNameTextView.setText(readyItem.getReadyItemName());
-        servedTableNumberTextView.setText(readyItem.getSeveredTableNumber());
+        itemQtyTextView.setText(String.valueOf(readyItem.getItemQty()));
     }
 }

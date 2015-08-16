@@ -9,7 +9,7 @@
         android:layout_margin="10dp"
         android:background="@color/grey200"
         android:layout_width="fill_parent"
-        android:layout_height="80dp">
+        android:layout_height="60dp">
 
         <TextView
             android:layout_width="wrap_content"
