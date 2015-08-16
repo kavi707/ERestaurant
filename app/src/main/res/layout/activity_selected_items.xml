@@ -1,11 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/black"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_margin="10dp"
+        android:background="@drawable/round_corner_heading"
+        android:layout_width="fill_parent"
+        android:layout_height="140dp">
+
+        <TextView
+            android:id="@+id/selectedCategoryNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="SELECTED CATEGORY NAME"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <RelativeLayout
+            android:id="@+id/selectedItemsRelativeLayout"
+            android:layout_width="fill_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_margin="10dp"
+                android:background="@color/splash_black"
+                android:gravity="center_vertical|right"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <EditText
+                    android:id="@+id/selectedItemSearchEditText"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.00"
+                    android:background="@color/splash_black"
+                    android:hint="@string/search_label"
+                    android:paddingLeft="10dp"
+                    android:textColorHint="@color/grey400"
+                    android:textSize="25dp" />
+
+                <ImageButton
+                    android:id="@+id/selectedItemSearchButton"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/splash_black"
+                    android:src="@drawable/search" />
+            </LinearLayout>
+
+        </RelativeLayout>
+    </RelativeLayout>
 
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
         android:id="@+id/selectedItemsListView"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>

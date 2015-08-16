@@ -14,7 +14,7 @@ import com.android.kavi.erestaurant.dataObjs.ReadyItem;
  * Created by kavi707 on 6/2/15.
  * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
-public class ReadyItemsListItemView extends RelativeLayout {
+public class ReadyListItemView extends RelativeLayout {
 
     private TextView readyTableNameTextView;
     private TextView readyItemNameTextView;
@@ -22,7 +22,7 @@ public class ReadyItemsListItemView extends RelativeLayout {
 
     private ReadyItem readyItem;
 
-    public ReadyItemsListItemView(Context context, AttributeSet attrs) {
+    public ReadyListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

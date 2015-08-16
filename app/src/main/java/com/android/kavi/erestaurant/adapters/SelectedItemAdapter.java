@@ -45,7 +45,7 @@ public class SelectedItemAdapter extends BaseAdapter {
 
         SelectedListItemView selectedListItem;
         if (convertView == null) {
-            selectedListItem = (SelectedListItemView) View.inflate(context, R.layout.selected_list_item, null);
+            selectedListItem = (SelectedListItemView) View.inflate(context, R.layout.list_item_selected, null);
         } else {
             selectedListItem = (SelectedListItemView) convertView;
         }

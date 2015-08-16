@@ -36,9 +36,10 @@ public class SelectedItemsActivity extends Activity {
 
         selectedItemListView = (ListView) findViewById(R.id.selectedItemsListView);
 
-        selectedItemList.add(new SelectedItem("Chicken Fried Rice", 100));
-        selectedItemList.add(new SelectedItem("Fish Fried Rice", 80));
-        selectedItemList.add(new SelectedItem("Vegetable Fried Rice", 60));
+        selectedItemList.add(new SelectedItem(null, "#1252", "Fried Rice with Vegetable & Egg", "Sample descroption text here ...", 400));
+        selectedItemList.add(new SelectedItem(null, "#1253", "Basmati Steamed Rice", "Sample descroption text here ...", 450));
+        selectedItemList.add(new SelectedItem(null, "#1254", "Mixed Fried Rice", "Sample descroption text here ...", 250));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample descroption text here ...", 550));
 
         selectedItemAdapter = new SelectedItemAdapter(selectedItemList, context);
         selectedItemListView.setAdapter(selectedItemAdapter);

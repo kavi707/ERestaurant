@@ -2,6 +2,9 @@ package com.android.kavi.erestaurant.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,10 +17,14 @@ import com.android.kavi.erestaurant.dataObjs.SelectedItem;
  */
 public class SelectedListItemView extends RelativeLayout {
 
+    private ImageView itemImageView;
+    private TextView itemCodeTextView;
     private TextView itemNameTextView;
+    private TextView itemDescriptionTextView;
     private TextView itemPriceTextView;
+    private ImageButton addToOrderBtn;
 
-    private SelectedItem selectedListItem;
+    private SelectedItem selectedItem;
 
     public SelectedListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -27,18 +34,25 @@ public class SelectedListItemView extends RelativeLayout {
     protected void onFinishInflate() {
         super.onFinishInflate();
 
+        itemImageView = (ImageView) findViewById(R.id.itemImageView);
+        itemCodeTextView = (TextView) findViewById(R.id.itemCodeTextView);
         itemNameTextView = (TextView) findViewById(R.id.itemNameTextView);
-        itemPriceTextView = (TextView) findViewById(R.id.priceTextView);
+        itemDescriptionTextView = (TextView) findViewById(R.id.itemDesTextView);
+        itemPriceTextView = (TextView) findViewById(R.id.itemPriceTextView);
+        addToOrderBtn = (ImageButton) findViewById(R.id.addToOrderButton);
     }
 
     public SelectedItem getSelectedItem() {
-        return selectedListItem;
+        return selectedItem;
     }
 
     public void setSelectedItem(SelectedItem selectedItem) {
-        this.selectedListItem = selectedListItem;
+        this.selectedItem = selectedItem;
 
-        itemNameTextView.setText(selectedItem.getSelectedItemName());
-        itemPriceTextView.setText("$ " + selectedItem.getSelectedItemPrice());
+        itemImageView.setImageBitmap(selectedItem.getItemImage());
+        itemCodeTextView.setText(selectedItem.getItemCode());
+        itemNameTextView.setText(selectedItem.getItemName());
+        itemDescriptionTextView.setText(selectedItem.getItemDes());
+        itemPriceTextView.setText("Rs." + selectedItem.getItemPrice() + "/-");
     }
 }

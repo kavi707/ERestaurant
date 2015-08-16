@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.android.kavi.erestaurant.views.ReadyItemsListItemView
+<com.android.kavi.erestaurant.views.ReadyListItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="60dp"
@@ -61,4 +61,4 @@
         android:layout_height="2dp"
         android:layout_alignParentBottom="true"
         android:background="@color/grey200" />
-</com.android.kavi.erestaurant.views.ReadyItemsListItemView>
+</com.android.kavi.erestaurant.views.ReadyListItemView>

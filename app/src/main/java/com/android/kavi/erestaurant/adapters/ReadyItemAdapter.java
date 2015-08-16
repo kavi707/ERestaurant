@@ -7,7 +7,7 @@ import android.widget.BaseAdapter;
 
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.dataObjs.ReadyItem;
-import com.android.kavi.erestaurant.views.ReadyItemsListItemView;
+import com.android.kavi.erestaurant.views.ReadyListItemView;
 
 import java.util.List;
 
@@ -43,11 +43,11 @@ public class ReadyItemAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ReadyItemsListItemView readyItemListItem;
+        ReadyListItemView readyItemListItem;
         if (convertView == null) {
-            readyItemListItem = (ReadyItemsListItemView) View.inflate(context, R.layout.list_item_ready, null);
+            readyItemListItem = (ReadyListItemView) View.inflate(context, R.layout.list_item_ready, null);
         } else {
-            readyItemListItem = (ReadyItemsListItemView) convertView;
+            readyItemListItem = (ReadyListItemView) convertView;
         }
 
         readyItemListItem.setReadyItem(readyItemList.get(position));
