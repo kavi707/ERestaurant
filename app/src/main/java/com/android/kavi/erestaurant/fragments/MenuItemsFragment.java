@@ -58,6 +58,7 @@ public class MenuItemsFragment extends Fragment {
                 Log.d("Grid Item pos: ", ">>>>>>>>>>>>>>>>>>>>>> " + position);
                 Intent selectedItemIntent = new Intent(getActivity(), SelectedItemsActivity.class);
                 startActivity(selectedItemIntent);
+                getActivity().finish();
             }
         });
         // End of loading data to grid view

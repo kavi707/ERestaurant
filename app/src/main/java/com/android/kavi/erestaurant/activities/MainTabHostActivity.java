@@ -22,6 +22,9 @@ public class MainTabHostActivity extends TabActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
+        Bundle bundle = getIntent().getExtras();
+        int tab_item = bundle.getInt("TAB_ITEM");
+
         setContentView(R.layout.activity_main_tab_host);
 
         Resources ressources = getResources();
@@ -63,6 +66,6 @@ public class MainTabHostActivity extends TabActivity {
         tabHost.addTab(tabSpecReadyItems);
 
         //set Windows tab as default (zero based)
-        tabHost.setCurrentTab(0);
+        tabHost.setCurrentTab(tab_item);
     }
 }

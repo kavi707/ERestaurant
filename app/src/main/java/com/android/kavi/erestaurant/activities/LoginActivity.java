@@ -31,6 +31,7 @@ public class LoginActivity extends Activity {
             @Override
             public void onClick(View v) {
                 Intent tabsIntent = new Intent(LoginActivity.this, MainTabHostActivity.class);
+                tabsIntent.putExtra("TAB_ITEM", 0);
                 startActivity(tabsIntent);
                 finish();
             }
