@@ -10,14 +10,13 @@
         android:layout_margin="10dp"
         android:background="@drawable/round_corner_heading"
         android:layout_width="fill_parent"
-        android:layout_height="140dp">
+        android:layout_height="220dp">
 
         <TextView
-            android:id="@+id/selectedCategoryNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="SELECTED CATEGORY NAME"
+            android:text="@string/current_order_label"
             android:textColor="@color/black"
             android:textSize="25dp"
             android:textStyle="bold"
@@ -43,25 +42,25 @@
                 android:weightSum="1">
 
                 <EditText
-                    android:id="@+id/selectedItemSearchEditText"
+                    android:id="@+id/currentOrderTableNameEditText"
                     android:layout_width="80dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1.00"
                     android:background="@color/splash_black"
-                    android:hint="@string/search_label"
+                    android:hint="@string/table_name_label"
                     android:paddingLeft="10dp"
                     android:textColorHint="@color/grey400"
                     android:textSize="25dp" />
 
                 <ImageButton
-                    android:id="@+id/selectedItemSearchButton"
-                    android:layout_width="70dp"
-                    android:layout_height="70dp"
+                    android:id="@+id/currentOrderTableSaveImageButton"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
                     android:layout_marginBottom="2dp"
                     android:layout_marginRight="2dp"
                     android:layout_marginTop="2dp"
                     android:background="@color/splash_black"
-                    android:src="@drawable/search" />
+                    android:src="@drawable/save_order_table" />
             </LinearLayout>
 
         </RelativeLayout>
@@ -69,7 +68,7 @@
         <ImageButton
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:id="@+id/navImageButton"
+            android:id="@+id/navCurrentOrderBackImageButton"
             android:src="@drawable/nav_back"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
@@ -78,7 +77,7 @@
             android:layout_alignParentStart="true" />
 
         <LinearLayout
-            android:id="@+id/currentOrderNavLinearLayout"
+            android:id="@+id/addItemLinearLayout"
             android:orientation="horizontal"
             android:layout_width="105dp"
             android:layout_height="45dp"
@@ -90,20 +89,39 @@
             android:layout_alignParentEnd="true">
 
             <TextView
-                android:text="@string/order_label"
+                android:text="@string/add_item_label"
                 android:textStyle="bold"
-                android:textSize="18dp"
+                android:textSize="16dp"
                 android:textColor="@color/grey600"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content" />
+                android:gravity="center"
+                android:layout_width="55dp"
+                android:layout_height="45dp" />
 
             <ImageView
                 android:layout_marginLeft="5dp"
-                android:src="@drawable/order_list"
+                android:src="@drawable/add_order_item"
                 android:layout_width="45dp"
                 android:layout_height="45dp" />
 
         </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm Order"
+            android:id="@+id/confirmOrderButton"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/navCurrentOrderBackImageButton"
+            android:layout_alignStart="@+id/navCurrentOrderBackImageButton" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:id="@+id/cancelOrderButton"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/confirmOrderButton"
+            android:layout_toEndOf="@+id/confirmOrderButton" />
 
     </RelativeLayout>
 
@@ -113,6 +131,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:id="@+id/selectedItemsListView"
+        android:id="@+id/currentOrderItemListView"
         android:layout_gravity="center_horizontal"/>
 </LinearLayout>

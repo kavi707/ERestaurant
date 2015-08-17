@@ -9,7 +9,7 @@ import android.widget.TabHost;
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.activities.tabs.ActiveTablesActivity;
 import com.android.kavi.erestaurant.activities.tabs.ReadyItemsActivity;
-import com.android.kavi.erestaurant.activities.tabs.SearchActivity;
+import com.android.kavi.erestaurant.activities.tabs.CurrentOrderActivity;
 import com.android.kavi.erestaurant.activities.tabs.HomeActivity;
 
 /**
@@ -34,12 +34,12 @@ public class MainTabHostActivity extends TabActivity {
                 .setIndicator("", ressources.getDrawable(R.drawable.home_image))
                 .setContent(intentHome);
 
-        // Search tab
-        Intent intentSearch = new Intent().setClass(this, SearchActivity.class);
-        TabHost.TabSpec tabSpecSearch = tabHost
-                .newTabSpec("Search")
+        // Current Order tab
+        Intent intentCurrentOrder = new Intent().setClass(this, CurrentOrderActivity.class);
+        TabHost.TabSpec tabSpecCurrentOrder = tabHost
+                .newTabSpec("Current Order")
                 .setIndicator("", ressources.getDrawable(R.drawable.search_image))
-                .setContent(intentSearch);
+                .setContent(intentCurrentOrder);
 
         // Active Tables tab
         Intent intentActiveTabs = new Intent().setClass(this, ActiveTablesActivity.class);
@@ -58,7 +58,7 @@ public class MainTabHostActivity extends TabActivity {
 
         // add all tabs
         tabHost.addTab(tabSpecHome);
-        tabHost.addTab(tabSpecSearch);
+        tabHost.addTab(tabSpecCurrentOrder);
         tabHost.addTab(tabSpecActiveTables);
         tabHost.addTab(tabSpecReadyItems);
 

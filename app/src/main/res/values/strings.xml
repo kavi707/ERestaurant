@@ -26,4 +26,10 @@
     <string name="active_table_add_item_label">Add Item</string>
     
     <string name="ready_item_label">READY ITEMS</string>
+
+    <string name="order_label">ORDER</string>
+
+    <string name="current_order_label">CURRENT ORDER</string>
+    <string name="table_name_label">Table No Type Here</string>
+    <string name="add_item_label">ADD ITEMS</string>
 </resources>
