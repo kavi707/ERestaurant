@@ -32,4 +32,7 @@
     <string name="current_order_label">CURRENT ORDER</string>
     <string name="table_name_label">Table No Type Here</string>
     <string name="add_item_label">ADD ITEMS</string>
+
+    <string name="item_title_label">ITEM TITLE</string>
+    <string name="item_price_label">ITEM PRICE -</string>
 </resources>
