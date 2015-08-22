@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
@@ -48,7 +50,14 @@ public class SelectedItemsActivity extends Activity {
         selectedItemList.add(new SelectedItem(null, "#1252", "Fried Rice with Vegetable & Egg", "Sample descroption text here ...", 400));
         selectedItemList.add(new SelectedItem(null, "#1253", "Basmati Steamed Rice", "Sample descroption text here ...", 450));
         selectedItemList.add(new SelectedItem(null, "#1254", "Mixed Fried Rice", "Sample descroption text here ...", 250));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample descroption text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
 
         selectedItemAdapter = new SelectedItemAdapter(selectedItemList, context);
         selectedItemListView.setAdapter(selectedItemAdapter);
@@ -70,6 +79,19 @@ public class SelectedItemsActivity extends Activity {
                 tabsIntent.putExtra("TAB_ITEM", 1);
                 startActivity(tabsIntent);
                 finish();
+            }
+        });
+
+        selectedItemListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+                Log.d("TAG", "Coming here: Clicked : " + position );
+
+                SelectedItem selectedItem = (SelectedItem) selectedItemListView.getItemAtPosition(position);
+
+                Intent singleItemIntent = new Intent(SelectedItemsActivity.this, SingleItemActivity.class);
+                startActivity(singleItemIntent);
             }
         });
     }

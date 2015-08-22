@@ -22,7 +22,7 @@ public class SelectedListItemView extends RelativeLayout {
     private TextView itemNameTextView;
     private TextView itemDescriptionTextView;
     private TextView itemPriceTextView;
-    private ImageButton addToOrderBtn;
+    private ImageView addToOrderBtn;
 
     private SelectedItem selectedItem;
 
@@ -39,7 +39,7 @@ public class SelectedListItemView extends RelativeLayout {
         itemNameTextView = (TextView) findViewById(R.id.itemNameTextView);
         itemDescriptionTextView = (TextView) findViewById(R.id.itemDesTextView);
         itemPriceTextView = (TextView) findViewById(R.id.itemPriceTextView);
-        addToOrderBtn = (ImageButton) findViewById(R.id.addToOrderButton);
+        addToOrderBtn = (ImageView) findViewById(R.id.addToOrderImageView);
     }
 
     public SelectedItem getSelectedItem() {

@@ -22,6 +22,7 @@
         <activity android:name=".activities.tabs.ReadyItemsActivity"/>
         <activity android:name=".activities.tabs.CurrentOrderActivity"/>
         <activity android:name=".activities.SelectedItemsActivity"/>
+        <activity android:name=".activities.SingleItemActivity"/>
     </application>
 
 </manifest>

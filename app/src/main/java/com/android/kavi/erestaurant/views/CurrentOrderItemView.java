@@ -24,7 +24,7 @@ public class CurrentOrderItemView extends RelativeLayout {
     private TextView currentOrderItemPriceTextView;
     private TextView currentOrderItemQtyTextView;
     private TextView currentOrderItemTotalTextView;
-    private ImageButton currentOrderItemRemoveButton;
+    private ImageView currentOrderItemRemoveImageView;
 
     private CurrentOrderItem currentOrderItem;
 
@@ -42,7 +42,7 @@ public class CurrentOrderItemView extends RelativeLayout {
         currentOrderItemPriceTextView = (TextView) findViewById(R.id.currentOrderItemPriceTextView);
         currentOrderItemQtyTextView = (TextView) findViewById(R.id.currentOrderItemQtyTextView);
         currentOrderItemTotalTextView = (TextView) findViewById(R.id.currentOrderItemTotalTextView);
-        currentOrderItemRemoveButton = (ImageButton) findViewById(R.id.removeFromCurrentOrderButton);
+        currentOrderItemRemoveImageView = (ImageView) findViewById(R.id.removeFromCurrentOrderImageView);
     }
 
     public CurrentOrderItem getCurrentOrderItem() {

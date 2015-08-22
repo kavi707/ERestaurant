@@ -5,8 +5,11 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.kavi.erestaurant.R;
@@ -54,6 +57,13 @@ public class ReadyItemsActivity extends ActionBarActivity {
 
         readyItemAdapter = new ReadyItemAdapter(readyItemList, context);
         readyItemsListView.setAdapter(readyItemAdapter);
+
+        readyItemsListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Log.d("TAG", "Ready Item list view item selected");
+            }
+        });
     }
 
     @Override
