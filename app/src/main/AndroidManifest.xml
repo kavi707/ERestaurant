@@ -23,6 +23,7 @@
         <activity android:name=".activities.tabs.CurrentOrderActivity"/>
         <activity android:name=".activities.SelectedItemsActivity"/>
         <activity android:name=".activities.SingleItemActivity"/>
+        <activity android:name=".activities.OrderBillActivity"/>
     </application>
 
 </manifest>

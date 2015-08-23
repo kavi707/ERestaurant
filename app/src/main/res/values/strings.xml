@@ -37,4 +37,7 @@
 
     <string name="item_title_label">ITEM TITLE</string>
     <string name="item_price_label">ITEM PRICE -</string>
+
+    <string name="order_bill_label">ORDER BILL</string>
+    <string name="print_label">PRINT</string>
 </resources>

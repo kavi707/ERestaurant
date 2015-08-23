@@ -72,6 +72,7 @@
             android:layout_height="45dp"
             android:id="@+id/navCurrentOrderBackImageButton"
             android:src="@drawable/nav_back"
+            android:background="@android:color/transparent"
             android:layout_marginTop="15dp"
             android:layout_marginLeft="20dp"
             android:layout_alignParentTop="true"
