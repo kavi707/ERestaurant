@@ -22,7 +22,8 @@
             android:textStyle="bold"
             android:layout_marginTop="15dp"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:id="@+id/textView" />
 
         <RelativeLayout
             android:id="@+id/selectedItemsRelativeLayout"
@@ -50,6 +51,7 @@
                     android:hint="@string/table_name_label"
                     android:paddingLeft="10dp"
                     android:textColorHint="@color/grey400"
+                    android:textColor="@color/grey200"
                     android:textSize="25dp" />
 
                 <ImageButton
@@ -108,20 +110,24 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirm Order"
+            android:text="@string/confirm_order_btn_label"
             android:id="@+id/confirmOrderButton"
+            android:background="@drawable/boarder_btn"
             android:layout_centerVertical="true"
             android:layout_alignLeft="@+id/navCurrentOrderBackImageButton"
-            android:layout_alignStart="@+id/navCurrentOrderBackImageButton" />
+            android:layout_alignStart="@+id/navCurrentOrderBackImageButton"
+            android:layout_toLeftOf="@+id/textView"
+            android:layout_toStartOf="@+id/textView" />
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:text="Cancel"
+            android:layout_marginLeft="5dp"
+            android:text="@string/cancel_label"
             android:id="@+id/cancelOrderButton"
+            android:background="@drawable/boarder_btn"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/confirmOrderButton"
-            android:layout_toEndOf="@+id/confirmOrderButton" />
+            android:layout_toRightOf="@+id/confirmOrderButton" />
 
     </RelativeLayout>
 

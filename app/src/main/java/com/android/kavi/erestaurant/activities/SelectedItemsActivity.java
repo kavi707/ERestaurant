@@ -47,16 +47,9 @@ public class SelectedItemsActivity extends Activity {
         navBackImageButton = (ImageButton) findViewById(R.id.navSelectedCategoryImageButton);
         currentOrderNavLinearLayout = (LinearLayout) findViewById(R.id.currentOrderNavLinearLayout);
 
-        selectedItemList.add(new SelectedItem(null, "#1252", "Fried Rice with Vegetable & Egg", "Sample descroption text here ...", 400));
-        selectedItemList.add(new SelectedItem(null, "#1253", "Basmati Steamed Rice", "Sample descroption text here ...", 450));
-        selectedItemList.add(new SelectedItem(null, "#1254", "Mixed Fried Rice", "Sample descroption text here ...", 250));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
-        selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
+        selectedItemList.add(new SelectedItem(null, "#1252", "Fried Rice with Vegetable & Egg", "Sample description text here ...", 400));
+        selectedItemList.add(new SelectedItem(null, "#1253", "Basmati Steamed Rice", "Sample description text here ...", 450));
+        selectedItemList.add(new SelectedItem(null, "#1254", "Mixed Fried Rice", "Sample description text here ...", 250));
         selectedItemList.add(new SelectedItem(null, "#1255", "Fried Rice with Shrimp & C.", "Sample description text here ...", 550));
 
         selectedItemAdapter = new SelectedItemAdapter(selectedItemList, context);

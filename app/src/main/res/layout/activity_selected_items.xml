@@ -51,6 +51,7 @@
                     android:hint="@string/search_label"
                     android:paddingLeft="10dp"
                     android:textColorHint="@color/grey400"
+                    android:textColor="@color/grey200"
                     android:textSize="25dp" />
 
                 <ImageButton

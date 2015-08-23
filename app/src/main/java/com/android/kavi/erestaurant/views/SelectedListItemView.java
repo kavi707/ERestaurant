@@ -2,6 +2,8 @@ package com.android.kavi.erestaurant.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -22,7 +24,7 @@ public class SelectedListItemView extends RelativeLayout {
     private TextView itemNameTextView;
     private TextView itemDescriptionTextView;
     private TextView itemPriceTextView;
-    private ImageView addToOrderBtn;
+    private ImageView addToOrderImageView;
 
     private SelectedItem selectedItem;
 
@@ -39,7 +41,7 @@ public class SelectedListItemView extends RelativeLayout {
         itemNameTextView = (TextView) findViewById(R.id.itemNameTextView);
         itemDescriptionTextView = (TextView) findViewById(R.id.itemDesTextView);
         itemPriceTextView = (TextView) findViewById(R.id.itemPriceTextView);
-        addToOrderBtn = (ImageView) findViewById(R.id.addToOrderImageView);
+        addToOrderImageView = (ImageView) findViewById(R.id.addToOrderImageView);
     }
 
     public SelectedItem getSelectedItem() {
@@ -54,5 +56,12 @@ public class SelectedListItemView extends RelativeLayout {
         itemNameTextView.setText(selectedItem.getItemName());
         itemDescriptionTextView.setText(selectedItem.getItemDes());
         itemPriceTextView.setText("Rs." + selectedItem.getItemPrice() + "/-");
+
+        addToOrderImageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("TAG", "Image Vew clicked >>>>>>>>>>>>>>> ");
+            }
+        });
     }
 }

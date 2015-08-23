@@ -2,13 +2,17 @@ package com.android.kavi.erestaurant.views;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.Log;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.activities.tabs.CurrentOrderActivity;
 import com.android.kavi.erestaurant.dataObjs.CurrentOrderItem;
 
 /**
@@ -27,8 +31,9 @@ public class CurrentOrderItemView extends RelativeLayout {
     private ImageView currentOrderItemRemoveImageView;
 
     private CurrentOrderItem currentOrderItem;
+    private CurrentOrderActivity currentOrderActivity = new CurrentOrderActivity();
 
-    public CurrentOrderItemView(Context context, AttributeSet attrs) {
+    public CurrentOrderItemView(Context context, AttributeSet attrs)  {
         super(context, attrs);
     }
 
@@ -58,5 +63,13 @@ public class CurrentOrderItemView extends RelativeLayout {
         currentOrderItemPriceTextView.setText("Rs." + currentOrderItem.getPrice() + "/-");
         currentOrderItemQtyTextView.setText("QTY - " + currentOrderItem.getQty());
         currentOrderItemTotalTextView.setText("Rs." + currentOrderItem.getTotal() + "/-");
+
+        currentOrderItemRemoveImageView.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Log.d("TAG", "Image Vew clicked >>>>>>>>>>>>>>> ");
+                currentOrderActivity.removeItemFromCurrentOrderListView();
+            }
+        });
     }
 }
