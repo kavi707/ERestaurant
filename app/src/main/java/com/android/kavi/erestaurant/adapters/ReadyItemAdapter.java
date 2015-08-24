@@ -43,14 +43,14 @@ public class ReadyItemAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-        ReadyListItemView readyItemListItem;
+        ReadyListItemView readyItemView;
         if (convertView == null) {
-            readyItemListItem = (ReadyListItemView) View.inflate(context, R.layout.list_item_ready, null);
+            readyItemView = (ReadyListItemView) View.inflate(context, R.layout.list_item_ready, null);
         } else {
-            readyItemListItem = (ReadyListItemView) convertView;
+            readyItemView = (ReadyListItemView) convertView;
         }
 
-        readyItemListItem.setReadyItem(readyItemList.get(position));
-        return readyItemListItem;
+        readyItemView.setReadyItem(readyItemList.get(position));
+        return readyItemView;
     }
 }

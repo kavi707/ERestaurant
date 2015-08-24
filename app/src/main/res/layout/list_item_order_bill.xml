@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.kavi.erestaurant.views.OrderBillListItemView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/splash_black">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center_vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#01252"
+            android:id="@+id/billItemCodeTextView"
+            android:textSize="20dp"
+            android:textColor="@color/redPrimary"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/billItemNameTextView"
+            android:textSize="20dp"
+            android:textColor="@color/grey200"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/billItemCodeTextView"
+            android:layout_toLeftOf="@+id/billItemUnitPriceTextView"
+            android:layout_toStartOf="@+id/billItemUnitPriceTextView" />
+
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:text="Rs.800/-"
+            android:id="@+id/billItemPriceTextView"
+            android:gravity="right"
+            android:textSize="20dp"
+            android:textColor="@color/yellow800"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="04"
+            android:id="@+id/billItemQtyTextView"
+            android:textSize="20dp"
+            android:textColor="@color/grey200"
+            android:layout_marginRight="2dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/billItemPriceTextView"
+            android:layout_toStartOf="@+id/billItemPriceTextView" />
+
+        <TextView
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:text="200/-"
+            android:id="@+id/billItemUnitPriceTextView"
+            android:textSize="20dp"
+            android:textColor="@color/grey200"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="2dp"
+            android:gravity="center"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/billItemQtyTextView"
+            android:layout_toStartOf="@+id/billItemQtyTextView" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/grey200" />
+</com.android.kavi.erestaurant.views.OrderBillListItemView>
