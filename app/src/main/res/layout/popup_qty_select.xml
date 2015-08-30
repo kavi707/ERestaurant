@@ -30,6 +30,26 @@
         android:layout_height="match_parent"
         android:layout_below="@+id/headerRelativeLayout">
 
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_left"
+            android:id="@+id/leftArrowImageView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/qtyHorizontalScrollView"
+            android:layout_alignTop="@+id/qtyHorizontalScrollView"/>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/arrow_right"
+            android:id="@+id/rightArrowImageView"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignBottom="@+id/qtyHorizontalScrollView"
+            android:layout_alignTop="@+id/qtyHorizontalScrollView" />
+
         <HorizontalScrollView
             android:id="@+id/qtyHorizontalScrollView"
             android:layout_width="wrap_content"
@@ -47,51 +67,71 @@
 
                 <ImageButton
                     android:id="@+id/oneImageBtn"
+                    android:src="@drawable/number_one"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/twoImageBtn"
+                    android:src="@drawable/number_two"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/threeImageBtn"
+                    android:src="@drawable/number_three"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/fourImageBtn"
+                    android:src="@drawable/number_four"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/fiveImageBtn"
+                    android:src="@drawable/number_five"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/sixImageBtn"
+                    android:src="@drawable/number_six"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/sevenImageBtn"
+                    android:src="@drawable/number_seven"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/eightImageBtn"
+                    android:src="@drawable/number_eight"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/nineImageBtn"
+                    android:src="@drawable/number_nine"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
 
                 <ImageButton
                     android:id="@+id/tenImageBtn"
+                    android:src="@drawable/number_ten"
+                    android:background="@android:color/transparent"
                     android:layout_width="100dp"
                     android:layout_height="100dp" />
             </LinearLayout>
