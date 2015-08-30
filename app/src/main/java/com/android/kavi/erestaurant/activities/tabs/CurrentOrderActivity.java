@@ -9,10 +9,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.adapters.CurrentOrderItemAdapter;
+import com.android.kavi.erestaurant.customDialogs.QtyDialog;
 import com.android.kavi.erestaurant.dataObjs.CurrentOrderItem;
 
 import java.util.ArrayList;
@@ -25,6 +27,8 @@ import java.util.List;
 public class CurrentOrderActivity extends ActionBarActivity {
 
     private ListView currentOrderListView;
+    private Button confirmOrderBtn;
+    private Button cancelOrderBtn;
 
     private CurrentOrderItemAdapter currentOrderItemAdapter;
     private List<CurrentOrderItem> currentOrderItemList = new ArrayList<>();
@@ -48,6 +52,8 @@ public class CurrentOrderActivity extends ActionBarActivity {
     private void setUpViews() {
 
         currentOrderListView = (ListView) findViewById(R.id.currentOrderItemListView);
+        confirmOrderBtn = (Button) findViewById(R.id.confirmOrderButton);
+        cancelOrderBtn = (Button) findViewById(R.id.cancelOrderButton);
 
         currentOrderItemList.add(new CurrentOrderItem(null, "#01252", "Fried Rice With Vegetable & Egg", 400, 2, 800));
         currentOrderItemList.add(new CurrentOrderItem(null, "#01253", "Fried Rice With Vegetable & Egg", 400, 2, 800));
@@ -61,31 +67,18 @@ public class CurrentOrderActivity extends ActionBarActivity {
                 Log.d("TAG", "current order item list view selected");
             }
         });
+
+        confirmOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                final QtyDialog qtyDialog = new QtyDialog(context);
+
+                qtyDialog.show();
+            }
+        });
     }
 
     public void removeItemFromCurrentOrderListView() {
 
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

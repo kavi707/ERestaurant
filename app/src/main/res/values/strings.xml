@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">ERestaurant</string>
 
+    <string name="ok_label">OK</string>
+    <string name="cancel_label">Cancel</string>
+    <string name="cancel_label_c">CANCEL</string>
+
     <string name="action_me_label">Me</string>
     <string name="action_settings_label">Settings</string>
     <string name="search_label">Search</string>
@@ -33,7 +37,6 @@
     <string name="table_name_label">Table No Type Here</string>
     <string name="add_item_label">ADD ITEMS</string>
     <string name="confirm_order_btn_label">Confirm Order</string>
-    <string name="cancel_label">Cancel</string>
 
     <string name="item_title_label">ITEM TITLE</string>
     <string name="item_price_label">ITEM PRICE -</string>
