@@ -21,7 +21,7 @@
             android:text="ITEM NAME"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
     </RelativeLayout>
 
@@ -57,7 +57,8 @@
             android:layout_centerHorizontal="true"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:layout_marginTop="75dp">
+            android:layout_marginBottom="25dp"
+            android:layout_above="@+id/qtyOkBtn">
 
             <LinearLayout
                 android:id="@+id/qtyLinearLayout"
@@ -143,46 +144,45 @@
             android:text="@string/ok_label"
             android:textSize="30dp"
             android:id="@+id/qtyOkBtn"
-            android:layout_below="@+id/qtyHorizontalScrollView"
             android:background="@drawable/round_corners_qty_btn"
-            android:layout_marginTop="60dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/leftArrowImageView"
             android:layout_alignRight="@+id/qtyHorizontalScrollView"
-            android:layout_alignEnd="@+id/qtyHorizontalScrollView"
-            android:layout_alignLeft="@+id/qtyHorizontalScrollView"
-            android:layout_alignStart="@+id/qtyHorizontalScrollView" />
+            android:layout_alignEnd="@+id/qtyHorizontalScrollView" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:text="OPTIONS"
             android:textSize="30dp"
+            android:layout_marginTop="25dp"
             android:id="@+id/qtyOptionsBtn"
             android:background="@drawable/round_corner_btn"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/qtyOkBtn"
-            android:layout_alignStart="@+id/qtyOkBtn"
+            android:layout_alignTop="@+id/middleSpaceTextView"
             android:layout_toLeftOf="@+id/middleSpaceTextView"
-            android:layout_toStartOf="@+id/middleSpaceTextView" />
+            android:layout_alignLeft="@+id/qtyOkBtn"
+            android:layout_alignStart="@+id/qtyOkBtn" />
 
         <Button
             android:layout_width="wrap_content"
             android:layout_height="70dp"
             android:textSize="30dp"
+            android:layout_marginTop="25dp"
             android:text="@string/cancel_label_c"
             android:id="@+id/qtyCancelBtn"
             android:background="@drawable/round_corner_btn"
-            android:layout_centerVertical="true"
+            android:layout_alignTop="@+id/middleSpaceTextView"
             android:layout_alignRight="@+id/qtyOkBtn"
             android:layout_alignEnd="@+id/qtyOkBtn"
             android:layout_toRightOf="@+id/middleSpaceTextView"
             android:layout_toEndOf="@+id/middleSpaceTextView" />
 
         <TextView
-            android:layout_width="5dp"
-            android:layout_height="wrap_content"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:text=""
             android:id="@+id/middleSpaceTextView"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/qtyOkBtn"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 
