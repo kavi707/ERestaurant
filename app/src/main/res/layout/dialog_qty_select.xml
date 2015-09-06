@@ -21,7 +21,7 @@
             android:text="ITEM NAME"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@color/black"
-            android:textSize="25dp"
+            android:textSize="30dp"
             android:textStyle="bold" />
     </RelativeLayout>
 
@@ -55,9 +55,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
             android:layout_marginLeft="35dp"
             android:layout_marginRight="35dp"
-            android:layout_marginTop="75dp">
+            android:layout_marginBottom="25dp">
 
             <LinearLayout
                 android:id="@+id/qtyLinearLayout"
@@ -143,13 +144,11 @@
             android:text="@string/ok_label"
             android:textSize="30dp"
             android:id="@+id/qtyOkBtn"
-            android:layout_below="@+id/qtyHorizontalScrollView"
             android:background="@drawable/round_corners_qty_btn"
-            android:layout_marginTop="60dp"
+            android:layout_below="@+id/qtyHorizontalScrollView"
+            android:layout_toRightOf="@+id/leftArrowImageView"
             android:layout_alignRight="@+id/qtyHorizontalScrollView"
-            android:layout_alignEnd="@+id/qtyHorizontalScrollView"
-            android:layout_alignLeft="@+id/qtyHorizontalScrollView"
-            android:layout_alignStart="@+id/qtyHorizontalScrollView" />
+            android:layout_alignEnd="@+id/qtyHorizontalScrollView" />
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -176,8 +175,8 @@
             android:layout_alignEnd="@+id/qtyOkBtn" />
 
         <TextView
-            android:layout_width="5dp"
-            android:layout_height="wrap_content"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
             android:text=""
             android:id="@+id/middleSpaceTextView"
             android:layout_below="@+id/qtyOkBtn"

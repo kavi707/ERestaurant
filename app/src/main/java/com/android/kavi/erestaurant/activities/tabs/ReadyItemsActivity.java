@@ -1,6 +1,5 @@
 package com.android.kavi.erestaurant.activities.tabs;
 
-import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
@@ -13,9 +12,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 
 import com.android.kavi.erestaurant.R;
-import com.android.kavi.erestaurant.adapters.ActiveTableItemAdapter;
 import com.android.kavi.erestaurant.adapters.ReadyItemAdapter;
-import com.android.kavi.erestaurant.dataObjs.ActiveTableItem;
 import com.android.kavi.erestaurant.dataObjs.ReadyItem;
 
 import java.util.ArrayList;
@@ -64,27 +61,5 @@ public class ReadyItemsActivity extends ActionBarActivity {
                 Log.d("TAG", "Ready Item list view item selected");
             }
         });
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
     }
 }

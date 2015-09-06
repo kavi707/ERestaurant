@@ -71,9 +71,14 @@ public class CurrentOrderActivity extends ActionBarActivity {
         confirmOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final QtyDialog qtyDialog = new QtyDialog(context);
-
+                final QtyDialog qtyDialog = new QtyDialog(context, "ITEM NAME");
                 qtyDialog.show();
+                qtyDialog.setDialogResult(new QtyDialog.OnDialogResult() {
+                    @Override
+                    public void finish(int result) {
+                        Log.d(">>>>>>>>>>>>>>>>", String.valueOf(result));
+                    }
+                });
             }
         });
     }
