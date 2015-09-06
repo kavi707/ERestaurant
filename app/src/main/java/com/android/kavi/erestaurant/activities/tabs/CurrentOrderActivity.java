@@ -49,6 +49,8 @@ public class CurrentOrderActivity extends ActionBarActivity {
         setUpViews();
     }
 
+
+
     private void setUpViews() {
 
         currentOrderListView = (ListView) findViewById(R.id.currentOrderItemListView);
@@ -65,6 +67,10 @@ public class CurrentOrderActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("TAG", "current order item list view selected");
+                CurrentOrderItem currentOrderItem = currentOrderItemList.get(position);
+                currentOrderItemList.remove(currentOrderItem);
+                currentOrderItemAdapter = new CurrentOrderItemAdapter(currentOrderItemList, context);
+                currentOrderListView.setAdapter(currentOrderItemAdapter);
             }
         });
 
@@ -83,7 +89,11 @@ public class CurrentOrderActivity extends ActionBarActivity {
         });
     }
 
-    public void removeItemFromCurrentOrderListView() {
+    public List<CurrentOrderItem> getCurrentOrderItemList() {
+        return currentOrderItemList;
+    }
 
+    public void setCurrentOrderItemList(List<CurrentOrderItem> currentOrderItemList) {
+        this.currentOrderItemList = currentOrderItemList;
     }
 }

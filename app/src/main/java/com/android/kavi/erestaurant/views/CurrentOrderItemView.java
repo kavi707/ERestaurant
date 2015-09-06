@@ -15,6 +15,8 @@ import com.android.kavi.erestaurant.R;
 import com.android.kavi.erestaurant.activities.tabs.CurrentOrderActivity;
 import com.android.kavi.erestaurant.dataObjs.CurrentOrderItem;
 
+import java.util.List;
+
 /**
  * Created by kavi707 on 8/17/15.
  *
@@ -54,7 +56,7 @@ public class CurrentOrderItemView extends RelativeLayout {
         return currentOrderItem;
     }
 
-    public void setCurrentOrderItem(CurrentOrderItem currentOrderItem) {
+    public void setCurrentOrderItem(final CurrentOrderItem currentOrderItem) {
         this.currentOrderItem = currentOrderItem;
 
         currentOrderItemImageView.setImageBitmap(currentOrderItem.getImage());
@@ -67,8 +69,7 @@ public class CurrentOrderItemView extends RelativeLayout {
         currentOrderItemRemoveImageView.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("TAG", "Image Vew clicked >>>>>>>>>>>>>>> ");
-                currentOrderActivity.removeItemFromCurrentOrderListView();
+                Log.d(">>>>>>>>>>>", "Btn clicked");
             }
         });
     }
