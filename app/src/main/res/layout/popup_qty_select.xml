@@ -151,38 +151,36 @@
             android:layout_alignLeft="@+id/qtyHorizontalScrollView"
             android:layout_alignStart="@+id/qtyHorizontalScrollView" />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:text="OPTIONS"
-            android:textSize="30dp"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/qty_custom_options"
             android:id="@+id/qtyOptionsBtn"
             android:background="@drawable/round_corner_btn"
-            android:layout_centerVertical="true"
-            android:layout_alignLeft="@+id/qtyOkBtn"
-            android:layout_alignStart="@+id/qtyOkBtn"
+            android:layout_alignTop="@+id/middleSpaceTextView"
             android:layout_toLeftOf="@+id/middleSpaceTextView"
-            android:layout_toStartOf="@+id/middleSpaceTextView" />
+            android:layout_alignLeft="@+id/qtyOkBtn"
+            android:layout_alignStart="@+id/qtyOkBtn" />
 
-        <Button
+        <ImageButton
             android:layout_width="wrap_content"
-            android:layout_height="70dp"
-            android:textSize="30dp"
-            android:text="@string/cancel_label_c"
+            android:layout_height="250dp"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/qty_custom_cancel"
             android:id="@+id/qtyCancelBtn"
             android:background="@drawable/round_corner_btn"
-            android:layout_centerVertical="true"
-            android:layout_alignRight="@+id/qtyOkBtn"
-            android:layout_alignEnd="@+id/qtyOkBtn"
+            android:layout_below="@+id/qtyOkBtn"
             android:layout_toRightOf="@+id/middleSpaceTextView"
-            android:layout_toEndOf="@+id/middleSpaceTextView" />
+            android:layout_alignRight="@+id/qtyOkBtn"
+            android:layout_alignEnd="@+id/qtyOkBtn" />
 
         <TextView
             android:layout_width="5dp"
             android:layout_height="wrap_content"
             android:text=""
             android:id="@+id/middleSpaceTextView"
-            android:layout_centerVertical="true"
+            android:layout_below="@+id/qtyOkBtn"
             android:layout_centerHorizontal="true" />
     </RelativeLayout>
 

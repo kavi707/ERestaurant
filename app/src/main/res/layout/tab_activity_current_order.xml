@@ -114,21 +114,28 @@
             android:text="@string/confirm_order_btn_label"
             android:id="@+id/confirmOrderButton"
             android:background="@drawable/boarder_btn"
-            android:layout_centerVertical="true"
+            android:layout_above="@+id/selectedItemsRelativeLayout"
+            android:layout_toLeftOf="@+id/separatorTextView"
             android:layout_alignLeft="@+id/navCurrentOrderBackImageButton"
-            android:layout_alignStart="@+id/navCurrentOrderBackImageButton"
-            android:layout_toLeftOf="@+id/textView"
-            android:layout_toStartOf="@+id/textView" />
+            android:layout_alignStart="@+id/navCurrentOrderBackImageButton" />
 
         <Button
             android:layout_width="100dp"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="5dp"
             android:text="@string/cancel_label"
             android:id="@+id/cancelOrderButton"
             android:background="@drawable/boarder_btn"
+            android:layout_above="@+id/selectedItemsRelativeLayout"
+            android:layout_toRightOf="@+id/separatorTextView"
+            android:layout_alignRight="@+id/addItemLinearLayout"
+            android:layout_alignEnd="@+id/addItemLinearLayout" />
+
+        <TextView
+            android:layout_width="10dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/separatorTextView"
             android:layout_centerVertical="true"
-            android:layout_toRightOf="@+id/confirmOrderButton" />
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 

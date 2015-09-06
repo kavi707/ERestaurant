@@ -123,7 +123,7 @@
             android:layout_alignParentRight="true"
             android:layout_alignTop="@+id/linearLayout"
             android:background="@color/splash_black"
-            android:src="@drawable/delete" />
+            android:src="@drawable/current_order_item_remove" />
     </RelativeLayout>
 
     <TextView

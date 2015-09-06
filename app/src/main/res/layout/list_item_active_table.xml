@@ -2,47 +2,49 @@
 <com.android.kavi.erestaurant.views.ActiveTableListItemView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
+    android:layout_height="120dp"
     android:orientation="vertical">
 
     <FrameLayout
         android:background="@color/splash_black"
         android:layout_width="fill_parent"
-        android:layout_height="100dp">
+        android:layout_height="120dp">
 
 
         <LinearLayout
             android:id="@+id/activeTableNameLinearLayout"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|center_vertical">
 
             <ImageView
                 android:layout_margin="10dp"
-                android:src="@drawable/table"
+                android:src="@drawable/active_tables_table"
                 android:layout_width="60dp"
                 android:layout_height="60dp" />
 
             <TextView
                 android:textColor="@color/grey200"
                 android:textSize="20dp"
-                android:text="Table Name"
+                android:text="Table XX"
                 android:id="@+id/activeTableNameTextView"
-                android:gravity="center_vertical"
+                android:gravity="center"
                 android:layout_width="100dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/activeTableBillLinearLayout"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center">
 
             <ImageView
-                android:src="@drawable/add_bill"
+                android:src="@drawable/active_tables_bill"
                 android:layout_width="60dp"
                 android:layout_height="60dp" />
 
@@ -50,20 +52,22 @@
                 android:textColor="@color/grey200"
                 android:textSize="20dp"
                 android:text="@string/active_table_bill_label"
-                android:gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:layout_width="100dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/activeTableAddItemLinearLayout"
-            android:orientation="horizontal"
+            android:orientation="vertical"
+            android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="right|center_vertical">
 
             <ImageView
-                android:src="@drawable/add_item"
+                android:src="@drawable/active_tables_add"
                 android:layout_width="60dp"
                 android:layout_height="60dp" />
 
@@ -71,7 +75,8 @@
                 android:textColor="@color/grey200"
                 android:textSize="20dp"
                 android:text="@string/active_table_add_item_label"
-                android:gravity="center_vertical"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
                 android:layout_width="100dp"
                 android:layout_height="match_parent" />
         </LinearLayout>
