@@ -53,6 +53,7 @@ public class AddonsActivity extends Activity {
 
     private void setUpViews() {
 
+        //TODO - Need to implement whole case with addons option buttons. Now it just add the edit text thing.
         navAddonsImageButton = (ImageButton) findViewById(R.id.navAddonsImageButton);
 
         addIngredientImgBtn = (ImageButton) findViewById(R.id.ingredientAddImageBtn);
@@ -74,6 +75,20 @@ public class AddonsActivity extends Activity {
             @Override
             public void onClick(View v) {
                 finish();
+            }
+        });
+
+        addonsCancelBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        addonsOkBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //TODO - Need to implement the functionality
             }
         });
 
