@@ -87,7 +87,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="NO"
+                        android:text="@string/no_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -98,7 +98,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="LOW"
+                        android:text="@string/low_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -109,7 +109,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="NORMAL"
+                        android:text="@string/normal_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -120,7 +120,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="HIGH"
+                        android:text="@string/high_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -131,7 +131,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="EXTRA"
+                        android:text="@string/extra_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -224,7 +224,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="NO"
+                        android:text="@string/no_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -235,7 +235,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="LOW"
+                        android:text="@string/low_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -246,7 +246,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="NORMAL"
+                        android:text="@string/normal_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -257,7 +257,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="HIGH"
+                        android:text="@string/high_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -268,7 +268,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="EXTRA"
+                        android:text="@string/extra_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
                 </LinearLayout>
@@ -361,7 +361,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="NO"
+                        android:text="@string/no_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -372,7 +372,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="LOW"
+                        android:text="@string/low_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -383,7 +383,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="NORMAL"
+                        android:text="@string/normal_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -394,7 +394,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="HIGH"
+                        android:text="@string/high_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
 
@@ -405,7 +405,7 @@
                         android:layout_marginLeft="2dp"
                         android:layout_marginRight="2dp"
                         android:background="@drawable/round_corner_addons_btn"
-                        android:text="EXTRA"
+                        android:text="@string/extra_btn_label"
                         android:textSize="18dp"
                         android:textStyle="bold" />
                 </LinearLayout>

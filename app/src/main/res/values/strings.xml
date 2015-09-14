@@ -48,4 +48,9 @@
     <string name="type_here_label">Type Here</string>
     <string name="addons_label">Addons</string>
     <string name="cooking_label">Cooking</string>
+    <string name="no_btn_label">NO</string>
+    <string name="low_btn_label">LOW</string>
+    <string name="normal_btn_label">NORMAL</string>
+    <string name="high_btn_label">HIGH</string>
+    <string name="extra_btn_label">EXTRA</string>
 </resources>
