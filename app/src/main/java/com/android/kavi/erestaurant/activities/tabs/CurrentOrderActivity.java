@@ -1,6 +1,7 @@
 package com.android.kavi.erestaurant.activities.tabs;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -13,6 +14,7 @@ import android.widget.Button;
 import android.widget.ListView;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.activities.AddonsActivity;
 import com.android.kavi.erestaurant.adapters.CurrentOrderItemAdapter;
 import com.android.kavi.erestaurant.customDialogs.QtyDialog;
 import com.android.kavi.erestaurant.dataObjs.CurrentOrderItem;
@@ -85,6 +87,14 @@ public class CurrentOrderActivity extends ActionBarActivity {
                         Log.d(">>>>>>>>>>>>>>>>", String.valueOf(result));
                     }
                 });
+            }
+        });
+
+        cancelOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent addonsIntent = new Intent(CurrentOrderActivity.this, AddonsActivity.class);
+                startActivity(addonsIntent);
             }
         });
     }

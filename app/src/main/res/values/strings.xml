@@ -43,4 +43,9 @@
 
     <string name="order_bill_label">ORDER BILL</string>
     <string name="print_label">PRINT</string>
+
+    <string name="ingredient_label">Ingredients</string>
+    <string name="type_here_label">Type Here</string>
+    <string name="addons_label">Addons</string>
+    <string name="cooking_label">Cooking</string>
 </resources>

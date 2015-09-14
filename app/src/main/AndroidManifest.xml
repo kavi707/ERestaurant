@@ -24,6 +24,7 @@
         <activity android:name=".activities.SelectedItemsActivity"/>
         <activity android:name=".activities.SingleItemActivity"/>
         <activity android:name=".activities.OrderBillActivity"/>
+        <activity android:name=".activities.AddonsActivity"/>
     </application>
 
 </manifest>
