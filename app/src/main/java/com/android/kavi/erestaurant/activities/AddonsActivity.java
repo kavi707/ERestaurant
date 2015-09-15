@@ -56,8 +56,7 @@ public class AddonsActivity extends Activity {
     }
 
     private void setUpViews() {
-
-        //TODO - Need to implement whole case with addons option buttons. Now it just add the edit text thing.
+        
         navAddonsImageButton = (ImageButton) findViewById(R.id.navAddonsImageButton);
 
         ingredientNoBtn = (Button) findViewById(R.id.ingredientNoBtn);
