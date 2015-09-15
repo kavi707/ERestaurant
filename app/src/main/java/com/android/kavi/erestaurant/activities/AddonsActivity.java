@@ -3,6 +3,7 @@ package com.android.kavi.erestaurant.activities;
 import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
@@ -12,6 +13,9 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.android.kavi.erestaurant.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by kavi707 on 9/14/15.
@@ -43,9 +47,13 @@ public class AddonsActivity extends Activity {
 
     private Context context  = this;
 
-    String ingredientOption = "";
-    String addonsOption = "";
-    String cookingOption = "";
+    private String ingredientOption = "";
+    private String addonsOption = "";
+    private String cookingOption = "";
+
+    private List<String> ingredientList = new ArrayList<>();
+    private List<String> addonList = new ArrayList<>();
+    private List<String> cookingList = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,7 +64,7 @@ public class AddonsActivity extends Activity {
     }
 
     private void setUpViews() {
-        
+
         navAddonsImageButton = (ImageButton) findViewById(R.id.navAddonsImageButton);
 
         ingredientNoBtn = (Button) findViewById(R.id.ingredientNoBtn);
@@ -281,6 +289,9 @@ public class AddonsActivity extends Activity {
             @Override
             public void onClick(View v) {
                 //TODO - Need to implement the functionality
+                Log.d("TAG", "Ingredient Count: " + ingredientList.size());
+                Log.d("TAG", "Addon Count: " + addonList.size());
+                Log.d("TAG", "Cooking Count: " + cookingList.size());
             }
         });
 
@@ -292,13 +303,19 @@ public class AddonsActivity extends Activity {
                     LayoutInflater view = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                     final View customIngredient = view.inflate(R.layout.list_item_addon, null);
+                    final String selectedIngredient = userChoice + ingredientOption;
+
                     TextView textView = (TextView) customIngredient.findViewById(R.id.addonItemNameTextView);
-                    textView.setText(userChoice + ingredientOption);
+                    textView.setText(selectedIngredient);
+
+                    ingredientList.add(selectedIngredient);
+
                     ImageButton imgBtn = (ImageButton) customIngredient.findViewById(R.id.addonItemRemoveImgBtn);
                     imgBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             ingredientListLinearLayout.removeView(customIngredient);
+                            ingredientList.remove(selectedIngredient);
                         }
                     });
 
@@ -315,13 +332,19 @@ public class AddonsActivity extends Activity {
                     LayoutInflater view = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                     final View customAddon = view.inflate(R.layout.list_item_addon, null);
+                    final String selectedAddon = userChoice + addonsOption;
+
                     TextView textView = (TextView) customAddon.findViewById(R.id.addonItemNameTextView);
-                    textView.setText(userChoice + addonsOption);
+                    textView.setText(selectedAddon);
+
+                    addonList.add(selectedAddon);
+
                     ImageButton imgBtn = (ImageButton) customAddon.findViewById(R.id.addonItemRemoveImgBtn);
                     imgBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             addonsListLinearLayout.removeView(customAddon);
+                            addonList.remove(selectedAddon);
                         }
                     });
 
@@ -338,13 +361,19 @@ public class AddonsActivity extends Activity {
                     LayoutInflater view = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
                     final View customCooking = view.inflate(R.layout.list_item_addon, null);
+                    final String selectedCooking = userChoice + cookingOption;
+
                     TextView textView = (TextView) customCooking.findViewById(R.id.addonItemNameTextView);
-                    textView.setText(userChoice + cookingOption);
+                    textView.setText(selectedCooking);
+
+                    cookingList.add(selectedCooking);
+
                     ImageButton imgBtn = (ImageButton) customCooking.findViewById(R.id.addonItemRemoveImgBtn);
                     imgBtn.setOnClickListener(new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
                             cookingListLinearLayout.removeView(customCooking);
+                            cookingList.remove(selectedCooking);
                         }
                     });
 
