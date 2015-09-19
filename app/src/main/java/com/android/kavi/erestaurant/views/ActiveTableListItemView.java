@@ -9,8 +9,10 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.activities.MainTabHostActivity;
 import com.android.kavi.erestaurant.activities.OrderBillActivity;
 import com.android.kavi.erestaurant.activities.tabs.ActiveTablesActivity;
+import com.android.kavi.erestaurant.activities.tabs.HomeActivity;
 import com.android.kavi.erestaurant.dataObjs.ActiveTableItem;
 
 /**
@@ -56,6 +58,21 @@ public class ActiveTableListItemView extends RelativeLayout {
             public void onClick(View v) {
                 Intent billIntent = new Intent(context, OrderBillActivity.class);
                 context.startActivity(billIntent);
+            }
+        });
+
+        tableNameLinearLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        addItemLinearLayout.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent homeIntent = new Intent(context, HomeActivity.class);
+                context.startActivity(homeIntent);
             }
         });
     }

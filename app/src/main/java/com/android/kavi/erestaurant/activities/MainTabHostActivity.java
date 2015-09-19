@@ -18,6 +18,8 @@ import com.android.kavi.erestaurant.activities.tabs.HomeActivity;
  */
 public class MainTabHostActivity extends TabActivity {
 
+    private TabHost tabHost;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,7 +30,7 @@ public class MainTabHostActivity extends TabActivity {
         setContentView(R.layout.activity_main_tab_host);
 
         Resources ressources = getResources();
-        TabHost tabHost = getTabHost();
+        tabHost = getTabHost();
 
         // Home tab
         Intent intentHome = new Intent().setClass(this, HomeActivity.class);
