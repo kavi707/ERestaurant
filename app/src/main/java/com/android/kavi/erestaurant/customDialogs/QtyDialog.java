@@ -2,6 +2,7 @@ package com.android.kavi.erestaurant.customDialogs;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
@@ -10,6 +11,7 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.activities.AddonsActivity;
 
 /**
  * Created by kavi707 on 8/30/15.
@@ -18,12 +20,15 @@ import com.android.kavi.erestaurant.R;
  */
 public class QtyDialog extends Dialog {
 
+    private Context context;
+
     private int qty;
     private String itemName;
     private OnDialogResult mDialogResult; // the callback
 
     public QtyDialog(Context context, String itemName) {
         super(context);
+        this.context = context;
         this.itemName = itemName;
     }
 
@@ -143,7 +148,8 @@ public class QtyDialog extends Dialog {
         qtyOptionsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent addonsIntent = new Intent(context, AddonsActivity.class);
+                context.startActivity(addonsIntent);
             }
         });
     }

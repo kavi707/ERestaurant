@@ -69,34 +69,34 @@ public class CurrentOrderActivity extends ActionBarActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Log.d("TAG", "current order item list view selected");
-                CurrentOrderItem currentOrderItem = currentOrderItemList.get(position);
+                /*CurrentOrderItem currentOrderItem = currentOrderItemList.get(position);
                 currentOrderItemList.remove(currentOrderItem);
                 currentOrderItemAdapter = new CurrentOrderItemAdapter(currentOrderItemList, context);
-                currentOrderListView.setAdapter(currentOrderItemAdapter);
+                currentOrderListView.setAdapter(currentOrderItemAdapter);*/
             }
         });
 
         confirmOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final QtyDialog qtyDialog = new QtyDialog(context, "ITEM NAME");
+                /*final QtyDialog qtyDialog = new QtyDialog(context, "ITEM NAME");
                 qtyDialog.show();
                 qtyDialog.setDialogResult(new QtyDialog.OnDialogResult() {
                     @Override
                     public void finish(int result) {
                         Log.d(">>>>>>>>>>>>>>>>", String.valueOf(result));
                     }
-                });
+                });*/
             }
         });
 
-        cancelOrderBtn.setOnClickListener(new View.OnClickListener() {
+        /*cancelOrderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent addonsIntent = new Intent(CurrentOrderActivity.this, AddonsActivity.class);
                 startActivity(addonsIntent);
             }
-        });
+        });*/
     }
 
     public List<CurrentOrderItem> getCurrentOrderItemList() {

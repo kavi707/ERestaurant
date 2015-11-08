@@ -11,6 +11,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.android.kavi.erestaurant.R;
+import com.android.kavi.erestaurant.customDialogs.QtyDialog;
 import com.android.kavi.erestaurant.dataObjs.SelectedItem;
 
 /**
@@ -18,6 +19,8 @@ import com.android.kavi.erestaurant.dataObjs.SelectedItem;
  * @author Kavimal Wijewardana <kavi707@gmail.com>
  */
 public class SelectedListItemView extends RelativeLayout {
+
+    private Context context;
 
     private ImageView itemImageView;
     private TextView itemCodeTextView;
@@ -30,6 +33,7 @@ public class SelectedListItemView extends RelativeLayout {
 
     public SelectedListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        this.context = context;
     }
 
     @Override
@@ -61,6 +65,14 @@ public class SelectedListItemView extends RelativeLayout {
             @Override
             public void onClick(View v) {
                 Log.d("TAG", "Image Vew clicked >>>>>>>>>>>>>>> ");
+                final QtyDialog qtyDialog = new QtyDialog(context, "ITEM NAME");
+                qtyDialog.show();
+                qtyDialog.setDialogResult(new QtyDialog.OnDialogResult() {
+                    @Override
+                    public void finish(int result) {
+                        Log.d(">>>>>>>>>>>>>>>>", String.valueOf(result));
+                    }
+                });
             }
         });
     }
