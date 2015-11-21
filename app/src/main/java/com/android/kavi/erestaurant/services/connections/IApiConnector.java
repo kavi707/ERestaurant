@@ -11,7 +11,7 @@ import java.util.Map;
  */
 public interface IApiConnector {
 
-    String sendHttpRequest(String url, String requestMethod, Map<String, String> additionalHeaders);
+    String sendHttpGetOrDeleteRequest(String url, String requestMethod, Map<String, String> additionalHeaders);
 
-    String sendHttpJsonPostRequest(String url, Map<String, String> additionalHeaders, JSONObject reqParams);
+    String sendHttpJsonPostOrPutRequest(String url, String requestMethod, Map<String, String> additionalHeaders, JSONObject reqParams);
 }

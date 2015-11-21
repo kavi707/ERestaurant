@@ -15,6 +15,8 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.methods.HttpPut;
 import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.http.conn.ConnectTimeoutException;
+import org.apache.http.conn.HttpHostConnectException;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicHeader;
@@ -39,7 +41,7 @@ public class AsyncApiConnector implements IApiConnector {
 
     private String requestUrl;
     private String requestMethod;
-    private String postRequestUrl;
+    private String postOrPutRequestUrl;
     private Map<String, String> getAdditionalHeaders;
     private JSONObject reqParams;
     private String httpCommonResponse  = "NULL";
@@ -47,13 +49,14 @@ public class AsyncApiConnector implements IApiConnector {
     /**
      * Method for sending HTTP GET, PUT or DELETE requests to api
      * @param url End point url (String)
-     * @param requestMethod Request method HTTP GET, PUT or DELETE (String)
+     * @param requestMethod Request method HTTP GET or DELETE (String)
      * @param additionalHeaders Request HTTP headers (Map<String, String> - header key & heade value)
      * @return String object
      */
-    public String sendHttpRequest(String url, String requestMethod, Map<String, String> additionalHeaders) {
+    @Override
+    public String sendHttpGetOrDeleteRequest(String url, String requestMethod, Map<String, String> additionalHeaders) {
 
-        Log.d("AsyncApiConnector", "AsyncApiConnector:sendHttpRequest");
+        Log.d("AsyncApiConnector", "AsyncApiConnector:sendHttpGetOrDeleteRequest");
         this.requestUrl = url;
         this.requestMethod = requestMethod;
         this.getAdditionalHeaders = additionalHeaders;
@@ -112,9 +115,9 @@ public class AsyncApiConnector implements IApiConnector {
                     if (deleteStatusCode == 200) {
                         responseResult = "{\"status\":\"SUCCESS\", \"msg\":\"Data deleted successfully\"}";
                     } else if (deleteStatusCode == 204) {
-                        responseResult = "{\"status\":\"ERROR\", \"msg\":\"No Content found to delete\"}";
+                        responseResult = "{\"name\":\"AppError\", \"message\":\"No Content found to delete\"}";
                     } else {
-                        responseResult = "{\"status\":\"ERROR\", \"msg\":" + httpResponse.getStatusLine().getReasonPhrase() + "}";
+                        responseResult = "{\"name\":\"AppError\", \"message\":" + httpResponse.getStatusLine().getReasonPhrase() + "}";
                     }
                 } else {
                     // If request is not and HTTP DELETE, then read the input stream and extract json string
@@ -122,11 +125,14 @@ public class AsyncApiConnector implements IApiConnector {
                     if (inputStream != null) {
                         responseResult = convertInputStreamToString(inputStream);
                     } else {
-                        responseResult = "{\"status\":\"ERROR\", \"msg\":" + httpResponse.getStatusLine().getReasonPhrase() + "}";
+                        responseResult = "{\"name\":\"AppError\", \"message\":" + httpResponse.getStatusLine().getReasonPhrase() + "}";
                     }
                 }
             } catch (ClientProtocolException e) {
                 e.printStackTrace();
+            } catch (ConnectTimeoutException ex) {
+                Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Exception: " + ex.toString());
+                responseResult = "{\"name\":\"ExceptionError\", \"message\":\"Connection Timeout\"}";
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -157,13 +163,16 @@ public class AsyncApiConnector implements IApiConnector {
     /**
      * Method for sending HTTP POST requests to api using JSON data
      * @param url End point url (String)
+     * @param requestMethod Request method HTTP POST or PUT (String)
      * @param additionalHeader Request HTTP headers (Map<String, String> - header key & heade value)
      * @param reqParams POST request body parameters (JSONObject)
      * @return String object
      */
-    public String sendHttpJsonPostRequest(String url, Map<String, String> additionalHeader, JSONObject reqParams) {
-        Log.d("AsyncApiConnector", "AsyncApiConnector:sendHttpJsonPostReq");
-        this.postRequestUrl = url;
+    @Override
+    public String sendHttpJsonPostOrPutRequest(String url, String requestMethod, Map<String, String> additionalHeader, JSONObject reqParams) {
+        Log.d("AsyncApiConnector", "AsyncApiConnector:sendHttpJsonPostOrPutRequest");
+        this.postOrPutRequestUrl = url;
+        this.requestMethod = requestMethod;
         this.getAdditionalHeaders = additionalHeader;
         this.reqParams = reqParams;
 
@@ -206,24 +215,40 @@ public class AsyncApiConnector implements IApiConnector {
 
             HttpClient client = new DefaultHttpClient();
             HttpConnectionParams.setConnectionTimeout(client.getParams(), 10000);
-            HttpResponse response;
+            HttpResponse response = null;
 
             try {
-                Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Req Url : " + postRequestUrl);
-                HttpPost post = new HttpPost(postRequestUrl);
+                Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Req Url : " + postOrPutRequestUrl);
                 Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Req Params : " + reqParams.toString());
-                StringEntity se = new StringEntity(reqParams.toString());
-                se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
-                post.setEntity(se);
+                if (requestMethod.equals(CommonUtils.HTTP_POST)) {
+                    HttpPost post = new HttpPost(postOrPutRequestUrl);
+                    StringEntity se = new StringEntity(reqParams.toString());
+                    se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+                    post.setEntity(se);
 
-                if (getAdditionalHeaders != null) {
-                    Set<String> headerKeys = getAdditionalHeaders.keySet();
-                    for (String key: headerKeys) {
-                        post.setHeader(key, getAdditionalHeaders.get(key));
+                    if (getAdditionalHeaders != null) {
+                        Set<String> headerKeys = getAdditionalHeaders.keySet();
+                        for (String key: headerKeys) {
+                            post.setHeader(key, getAdditionalHeaders.get(key));
+                        }
                     }
-                }
 
-                response = client.execute(post);
+                    response = client.execute(post);
+                } else if (requestMethod.equals(CommonUtils.HTTP_PUT)) {
+                    HttpPut put = new HttpPut(postOrPutRequestUrl);
+                    StringEntity se = new StringEntity(reqParams.toString());
+                    se.setContentType(new BasicHeader(HTTP.CONTENT_TYPE, "application/json"));
+                    put.setEntity(se);
+
+                    if (getAdditionalHeaders != null) {
+                        Set<String> headerKeys = getAdditionalHeaders.keySet();
+                        for (String key: headerKeys) {
+                            put.setHeader(key, getAdditionalHeaders.get(key));
+                        }
+                    }
+
+                    response = client.execute(put);
+                }
 
                 if(response != null) {
                     StatusLine statusLine = response.getStatusLine();
@@ -242,15 +267,24 @@ public class AsyncApiConnector implements IApiConnector {
                     responseResult = result;
 
                     if (statusCode == 200) {
-                        Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Status: Success Response : " + result);
+                        if (result == null || result.equals("")) {
+                            responseResult = "{\"status\":\"success\"}";
+                        }
+                        Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Status: Success Response : " + responseResult);
                     } else {
                         Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Error status code: " + String.valueOf(statusCode));
                     }
                 } else {
                     Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Error: null response after sending http req");
-                    responseResult = "error";
+                    responseResult = "{\"name\":\"HttpError\", \"message\":\"Empty Response\"}";
                 }
 
+            } catch (HttpHostConnectException ex) {
+                Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Exception: " + ex.toString());
+                responseResult = "{\"name\":\"ExceptionError\", \"message\":\"Connection Refused\"}";
+            } catch (ConnectTimeoutException ex) {
+                Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Exception: " + ex.toString());
+                responseResult = "{\"name\":\"ExceptionError\", \"message\":\"Connection Timeout\"}";
             } catch (Exception ex) {
                 Log.d("AsyncApiConnector", "AsyncApiConnector:SendHttpJSONPostTask / Exception: " + ex.toString());
             }
